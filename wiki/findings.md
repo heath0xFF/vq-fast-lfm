@@ -43,3 +43,9 @@ Only Q4_0 streams at the DDR roofline. Q3_K_M (−14 % bytes) is no faster; Q4_K
 1. **Cheaper small-batch verification on the HTP** (HVX multi-column Q4_0 kernel for M=2–8 and/or faster Q4_0→fp16 HMX dequant) – unlocks DSpark/n-gram speculation: 1.4–2× typical, up to ~4× on copy-heavy tasks.
 2. Cheaper drafting (TOP_K/CONCAT over 128k logits, Q4_0 draft weights).
 3. Task-adaptive speculation (fall back to plain when acceptance is low; n-gram for copy-heavy).
+
+## 8. d1-3B (decision model) on the Ventuno Q  (D00, D01)
+- d1 = LFM2.5-VL-3B-based "decision" model: typed questions in, calibrated probabilities out, **one forward pass, zero output tokens** → latency = prefill, so the NPU prefill path (HMX, ~690 tok/s) is what matters.
+- llama.cpp master already serves it (`POST /v1/systemone`); GenieX 0.4/0.8 don't. **534 ms per 3-question decision (text), 1.2 s with an image**, vs 4.3–4.6 s / 7.6 s for the previous transformers-fp32-on-CPU path (IQ-9075) ≈ 8.5× / 6.4×. The vision encoder runs on the NPU too (CPU-only would be 5.5–8.9 s).
+- Each request = 3–4 separate NPU passes (shared 50-token state prefix, parent suffix, then the other questions batched) and **every pass pays the ~100 ms HMX fixed cost** → ~70 % of the latency is fixed cost, not work. A server scheduling change (one pass for parent-suffix + children) or a faster Q4→fp16 dequant kernel are the next levers (est. 534 → ~300 ms).
+- **Quantization matters here**: the published Q4_K_M shifts probabilities by up to 0.10 and flips 10/80 alert decisions across 0.5; Q5_K_M flips 2, Q6_K 0, at identical NPU prefill speed – but Q6_K/Q8_0 don't map on the HTP and Q5_K_M doesn't fit together with the vision projector.

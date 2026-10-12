@@ -1,6 +1,8 @@
 # vq-fast-lfm — LFM2.5-2.6B as fast as possible on the Arduino Ventuno Q
 
-**Goal:** maximize inference speed of Liquid AI's LFM2.5-2.6B (Q4_0 GGUF) on the Ventuno Q
+**Focus update:** work is now on Liquid AI's **d1-3B decision model** (see `experiments/D*.md`); the LFM2.5-2.6B chat results below stay valid and carry over (same backbone, same NPU kernels).
+
+**Original goal:** maximize inference speed of Liquid AI's LFM2.5-2.6B (Q4_0 GGUF) on the Ventuno Q
 (Qualcomm Dragonwing IQ-8275 / QCS8275) using every tool available: GenieX, llama.cpp
 (CPU / Adreno OpenCL / Hexagon HTP), Qualcomm AI Hub / QAIRT / Genie, speculative decoding, etc.
 
@@ -33,7 +35,7 @@ _See [findings.md](findings.md) for the curated conclusions and [experiments/](e
 - [setup-notes.md](setup-notes.md) – environment gotchas & how-to (libcdsprpc, OpenCL ICD, Docker/Netskope CA, builds)
 - [findings.md](findings.md) – curated key findings
 - [ideas.md](ideas.md) – backlog of avenues, with status
-- [experiments/](experiments/) – one page per experiment (E00, E01, …)
+- [experiments/](experiments/) – one page per experiment (E00, E01, … for LFM2.5-2.6B chat; **D00, D01, … for the d1-3B decision model**)
 
 ## Repo layout
 ```
