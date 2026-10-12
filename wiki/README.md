@@ -20,7 +20,8 @@
 | E00 | geniex-bench llama.cpp **hybrid** | 108 | 9.8 | worse than pure NPU |
 | E05/E07 | **own llama.cpp master build, NPU, host thread pinned to cpu2** | **691** | **22.5** (21.0 in "slow mode", E13) | best plain config |
 | E09 | same, **QAD Q4_0** weights | 690 | 22.4 | identical speed, better quality |
-| E10 | + **DSpark** speculative (lossless), n-max 9 | – | summarize **42.3**, math 25.3, code 24.3, json 20.6, chat 16.2 | task dependent; small-batch HTP cost is the limiter |
+| E10 | + **DSpark** speculative (lossless), n-max 9 | – | math 25.3, code 24.3, json 20.6, chat 16.2 (plain ≈ 20.8); echo-style prompt 42.3 | task dependent; small-batch HTP cost is the limiter (the 42.3 case is the model copying its input verbatim) |
+| E14 | + **n-gram** speculation (`ngram-mod`, match 4) | – | edit-text 26.3 vs 22.4 plain (+17 %), edit-code +5 %, otherwise = plain | free: no draft model, never slower in tests |
 
 **Best known recipe today:** `scripts/serve_best.sh` (plain, QAD Q4_0) or `SPEC=1 scripts/serve_best.sh` (DSpark) on the VQ.
 

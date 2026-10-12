@@ -1,0 +1,5 @@
+<|im_start|>user
+Fix all spelling and grammar mistakes in the following paragraph. Return only the corrected paragraph.
+
+Their are several reason why memory bandwith limit the speed of token generation on small edge devices. Each time the model produce a new token it must read every weight from memory once, wich means the memmory system, not the compute units, usualy decide how fast the model can respond. When the prompt is long however the situation change, because many tokens are processed together and the weights are reused, so the neural processing unit become the bottleneck insted. Developers should therefor measure both phases seperately before deciding wich optimisation is worth the effort.<|im_end|>
+<|im_start|>assistant

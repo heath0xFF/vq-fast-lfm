@@ -1,5 +1,7 @@
 # E10 – DSpark speculative decoding, per-task grid (HTP, pinned core 2)
 
+> **Correction (added later):** the `summarize` prompt does *not* produce a summary – the greedy model copies the input paragraph back verbatim (and then loops). The +104 % row is therefore a best-case "verbatim echo" number, not representative of summarization. Real gains seen so far: code/math/edit-style +6..22 %, JSON ~0, free-form chat negative.
+
 Target = geniex `LFM2.5-2.6B-Q4_0.gguf`, draft = `DSpark-Q8_0` (349 MB), both on HTP0, `-fa on`, greedy, 200 new tokens, `-t 1`, master build (8bb3cf0).
 Plain = `llama-completion` same prompt. `scripts/spbench.sh`. Output is lossless (target verifies everything).
 
@@ -8,7 +10,7 @@ Plain = `llama-completion` same prompt. `scripts/spbench.sh`. Output is lossless
 | chat (free-form reasoning prose) | 20.83 | 19.1 | 17.1 | 16.7 | 16.2 | **−8 %** (n3) |
 | code (python + tests) | 20.95 | 17.9 | 22.8 | 23.9 | 24.3 | +16 % |
 | math (step-by-step word problem) | 20.84 | 22.5 | 23.0 | 24.2 | 25.3 | +22 % |
-| summarize (copy-heavy) | 20.71 | 27.7 | 32.1 | 38.2 | **42.3** | **+104 %** |
+| "summarize" (⚠ see correction: model echoes the input paragraph verbatim) | 20.71 | 27.7 | 32.1 | 38.2 | 42.3 | +104 % (echo case only) |
 | json (structured generation) | 20.86 | 19.5 | 20.0 | 20.6 | 20.6 | −1 % |
 
 Acceptance (tokens emitted per verify cycle at n-max 9) measured on the Mac/Metal with the same sidecar, to confirm the HTP integration is correct:

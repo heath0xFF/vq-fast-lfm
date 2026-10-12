@@ -26,13 +26,17 @@ Only Q4_0 streams at the DDR roofline. Q3_K_M (−14 % bytes) is no faster; Q4_K
 
 ## 5. Speculative decoding with Liquid's DSpark drafter (E04, E10) – works, lossless, but the HTP's small-batch cost caps the gain
 - GenieX's plugin can't run `draft-dspark`; our own llama.cpp build can.
-- Per-task decode, plain 20.8 → DSpark n-max 9: **summarize 42.3 (+104 %)**, math 25.3 (+22 %), code 24.3 (+16 %), json 20.6 (±0), free-form chat 16.2 (**−22 %**, n-max 3: 19.1).
+- Per-task decode, plain 20.8 → DSpark n-max 9: math 25.3 (+22 %), code 24.3 (+16 %), json 20.6 (±0), free-form chat 16.2 (**−22 %**, n-max 3: 19.1), and 42.3 (+104 %) on the "summarize" prompt – **but that prompt makes the model echo its input verbatim, so it is a best-case echo number, not typical summarization** (corrected).
 - Reason: a verify pass of M ≥ 5 tokens costs ~100 ms on the HTP (HMX path, dequant-bound) vs 45 ms for M = 1; M = 3–4 uses a slow HVX kernel (83–99 ms). The drafter adds ~38 ms/cycle (Q8_0 matmuls + Markov head over 128k logits).
 - If verification were ~55 ms: projected 32–47 t/s typical, ~80 t/s on copy-heavy text.
+
+## 5b. N-gram speculation: free, modest (E14)
+`--spec-type ngram-mod` needs no draft model and never drafts when nothing matches, so it cost nothing in any test (code/json/chat-like prompts ran at plain speed). With a short match length (`--spec-ngram-mod-n-match 4 --spec-ngram-mod-n-min 2`) it gives **+17 % on a typo-fix edit and +5 % on a code edit** (all drafted tokens accepted). Default match length 24 drafts nothing on those tasks. It also gives big numbers whenever the output repeats earlier text (loops, regenerated identical requests: up to 10× on an exact repeat) – real but not a general speed-up.
 
 ## 6. Dead ends / blocked
 - **AI Hub / Genie / QAIRT**: `qai-hub-models` 0.64 has no LFM2 (short-conv hybrid) model and GenieX's QAIRT registry has no LFM entry; no AI Hub token available here. Even if ported, W4 decode is DDR-bound like Q4_0 → little to gain for decode.
 - GPU OpenCL path (5.3 t/s) and hybrid (9.8) are slower than CPU; CPU draft model for HTP target crashes; F16 draft exceeds HTP mapping budget.
+- **Second NPU**: Qualcomm docs say "dual Hexagon" for the IQ-8275 EVK, but the Ventuno Q exposes only `/dev/fastrpc-cdsp` (+ `gdsp0`, a general-purpose DSP, not an HTP); `HTP1` appears in ggml-hex only as a static fallback and `--device HTP1` is rejected. It also wouldn't help decode: DDR bandwidth is shared (NPU at ~88 % of the 51 GB/s theoretical peak).
 - `GGML_HEXAGON_*` power mode, OPPOLL, HOSTBUF: no measurable effect. A 21.0/22.5 t/s bimodality (E13) exists independent of all of them.
 
 ## 7. Where the remaining big upside is

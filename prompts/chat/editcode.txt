@@ -1,0 +1,31 @@
+<|im_start|>user
+Add type hints and a one-line docstring to every function in this Python module. Return only the full updated code in one code block.
+
+```python
+import json, os
+
+def load_config(path, defaults=None):
+    cfg = dict(defaults or {})
+    if os.path.exists(path):
+        with open(path) as f:
+            cfg.update(json.load(f))
+    return cfg
+
+def merge_configs(a, b):
+    out = dict(a)
+    for k, v in b.items():
+        if isinstance(v, dict) and isinstance(out.get(k), dict):
+            out[k] = merge_configs(out[k], v)
+        else:
+            out[k] = v
+    return out
+
+def get_nested(cfg, dotted, default=None):
+    cur = cfg
+    for part in dotted.split("."):
+        if not isinstance(cur, dict) or part not in cur:
+            return default
+        cur = cur[part]
+    return cur
+```<|im_end|>
+<|im_start|>assistant
