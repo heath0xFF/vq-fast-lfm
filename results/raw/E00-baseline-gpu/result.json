@@ -1,0 +1,29 @@
+{
+    "schema_version": "6",
+    "cell_id": "cell",
+    "plugin": "llama_cpp",
+    "device": "gpu",
+    "device_id": "GPUOpenCL",
+    "model_path": "/home/arduino/models/lfm25-2.6b-q4_0/LFM2.5-2.6B-Q4_0.gguf",
+    "model_size_bytes": 1593894720,
+    "geniex_version": "v0.8.0",
+    "qairt_version": "2.45",
+    "llama_cpp_version": "9425611",
+    "params": {
+      "warmup": 1, "repetitions": 3, "n_prompt": 512, "n_gen": 64,
+      "temperature": 0.000000, "top_p": 0.000000, "seed": 42, "n_ctx": 0, "n_threads": 0, "n_ubatch": 0, "n_gpu_layers": -1
+    },
+    "runs": [
+      {"run_idx": 0, "ttft_us": 12935142, "media_us": 0, "prompt_time_us": 12931870, "decode_time_us": 12126242, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 39.592108, "decode_tps": 5.277810, "stop_reason": "length"},
+      {"run_idx": 1, "ttft_us": 12924602, "media_us": 0, "prompt_time_us": 12921303, "decode_time_us": 12135581, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 39.624487, "decode_tps": 5.273748, "stop_reason": "length"},
+      {"run_idx": 2, "ttft_us": 12921984, "media_us": 0, "prompt_time_us": 12918635, "decode_time_us": 12119937, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 39.632670, "decode_tps": 5.280556, "stop_reason": "length"}
+    ],
+    "agg": {
+      "ttft_ms":     {"median": 12924.602000, "min": 12921.984000, "max": 12935.142000, "mean": 12927.242667, "stdev": 6.965133},
+      "prefill_tps": {"median": 39.624487, "min": 39.592108, "max": 39.632670, "mean": 39.616422, "stdev": 0.021450},
+      "decode_tps":  {"median": 5.277810, "min": 5.273748, "max": 5.280556, "mean": 5.277371, "stdev": 0.003425},
+      "gen_tokens":  {"median": 64.000000},
+      "prompt_tokens":{"median": 512.000000},
+      "media_ms":{"median": 0.000000}
+    }
+}

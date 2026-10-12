@@ -1,0 +1,1 @@
+Return a JSON array of 6 objects describing fictional smartphones. Each object must have the keys "name", "price_usd", "screen_inches", "battery_mah", "ram_gb", and "colors" (an array of strings). Output only the JSON.

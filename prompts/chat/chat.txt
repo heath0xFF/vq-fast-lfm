@@ -1,0 +1,3 @@
+<|im_start|>user
+Explain, in a few clear paragraphs, how a Hexagon NPU differs from a GPU when running large language model inference on an edge device, and why memory bandwidth matters so much for token generation.<|im_end|>
+<|im_start|>assistant

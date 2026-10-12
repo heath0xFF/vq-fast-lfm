@@ -1,0 +1,27 @@
+{
+    "schema_version": "6",
+    "cell_id": "cell",
+    "plugin": "llama_cpp",
+    "device": "npu",
+    "device_id": "HTP0",
+    "model_path": "/home/arduino/models/lfm25-2.6b-q4_0/LFM2.5-2.6B-Q4_0.gguf",
+    "model_size_bytes": 1593894720,
+    "geniex_version": "v0.8.0",
+    "qairt_version": "2.45",
+    "llama_cpp_version": "9425611",
+    "params": {
+      "warmup": 0, "repetitions": 1, "n_prompt": 64, "n_gen": 32,
+      "temperature": 0.000000, "top_p": 0.000000, "seed": 42, "n_ctx": 0, "n_threads": 0, "n_ubatch": 0, "n_gpu_layers": -1
+    },
+    "runs": [
+      {"run_idx": 0, "ttft_us": 144760, "media_us": 0, "prompt_time_us": 144456, "decode_time_us": 1866370, "prompt_tokens": 64, "gen_tokens": 32, "prefill_tps": 443.041480, "decode_tps": 17.145582, "stop_reason": "length"}
+    ],
+    "agg": {
+      "ttft_ms":     {"median": 144.760000, "min": 144.760000, "max": 144.760000, "mean": 144.760000, "stdev": 0.000000},
+      "prefill_tps": {"median": 443.041480, "min": 443.041480, "max": 443.041480, "mean": 443.041480, "stdev": 0.000000},
+      "decode_tps":  {"median": 17.145582, "min": 17.145582, "max": 17.145582, "mean": 17.145582, "stdev": 0.000000},
+      "gen_tokens":  {"median": 32.000000},
+      "prompt_tokens":{"median": 64.000000},
+      "media_ms":{"median": 0.000000}
+    }
+}

@@ -1,0 +1,5 @@
+<|im_start|>user
+Summarize the following text in three bullet points, reusing key phrases where possible.
+
+Text: The Arduino Ventuno Q is a single-board computer built around the Qualcomm Dragonwing IQ-8275 system-on-chip. It combines an octa-core Kryo CPU, an Adreno GPU and a Hexagon Tensor Processor with 40 TOPS of AI performance, and it ships with 16 GB of LPDDR5 memory. The board runs Ubuntu 24.04 and is aimed at developers building robotics, computer vision and on-device generative AI applications. Because large language models are memory-bandwidth bound during token generation, the board's memory subsystem largely determines how fast a model can respond, while the NPU determines how quickly long prompts are processed.<|im_end|>
+<|im_start|>assistant

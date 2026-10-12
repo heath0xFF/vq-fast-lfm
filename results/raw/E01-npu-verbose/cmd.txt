@@ -1,0 +1,2 @@
+ENV: GGML_HEXAGON_VERBOSE=1
+ARGS: --plugin llama_cpp --device npu -m /home/arduino/models/lfm25-2.6b-q4_0/LFM2.5-2.6B-Q4_0.gguf -p 64 -n 16 -r 1 --warmup 0

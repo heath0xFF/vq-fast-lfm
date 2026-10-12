@@ -1,0 +1,1 @@
+Write a Python function `merge_intervals(intervals: list[tuple[int, int]]) -> list[tuple[int, int]]` that merges overlapping intervals. Include a docstring, handle edge cases, and add three unit tests using pytest.

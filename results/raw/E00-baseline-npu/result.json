@@ -1,0 +1,29 @@
+{
+    "schema_version": "6",
+    "cell_id": "cell",
+    "plugin": "llama_cpp",
+    "device": "npu",
+    "device_id": "HTP0",
+    "model_path": "/home/arduino/models/lfm25-2.6b-q4_0/LFM2.5-2.6B-Q4_0.gguf",
+    "model_size_bytes": 1593894720,
+    "geniex_version": "v0.8.0",
+    "qairt_version": "2.45",
+    "llama_cpp_version": "9425611",
+    "params": {
+      "warmup": 1, "repetitions": 3, "n_prompt": 512, "n_gen": 64,
+      "temperature": 0.000000, "top_p": 0.000000, "seed": 42, "n_ctx": 0, "n_threads": 0, "n_ubatch": 0, "n_gpu_layers": -1
+    },
+    "runs": [
+      {"run_idx": 0, "ttft_us": 756954, "media_us": 0, "prompt_time_us": 755060, "decode_time_us": 3252479, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 678.091807, "decode_tps": 19.677298, "stop_reason": "length"},
+      {"run_idx": 1, "ttft_us": 753233, "media_us": 0, "prompt_time_us": 752592, "decode_time_us": 3255101, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 680.315496, "decode_tps": 19.661448, "stop_reason": "length"},
+      {"run_idx": 2, "ttft_us": 779945, "media_us": 0, "prompt_time_us": 777982, "decode_time_us": 3233600, "prompt_tokens": 512, "gen_tokens": 64, "prefill_tps": 658.112913, "decode_tps": 19.792182, "stop_reason": "length"}
+    ],
+    "agg": {
+      "ttft_ms":     {"median": 756.954000, "min": 753.233000, "max": 779.945000, "mean": 763.377333, "stdev": 14.468142},
+      "prefill_tps": {"median": 678.091807, "min": 658.112913, "max": 680.315496, "mean": 672.173405, "stdev": 12.227399},
+      "decode_tps":  {"median": 19.677298, "min": 19.661448, "max": 19.792182, "mean": 19.710310, "stdev": 0.071345},
+      "gen_tokens":  {"median": 64.000000},
+      "prompt_tokens":{"median": 512.000000},
+      "media_ms":{"median": 0.000000}
+    }
+}

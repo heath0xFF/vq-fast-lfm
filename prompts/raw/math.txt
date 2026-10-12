@@ -1,0 +1,1 @@
+A train leaves city A at 9:00 AM traveling at 60 mph. Another train leaves city B, 270 miles away, at 10:00 AM traveling toward city A at 75 mph. At what time do they meet? Show your reasoning step by step.

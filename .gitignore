@@ -1,0 +1,10 @@
+# big / reproducible artifacts (see wiki/reproduce.md)
+third_party/
+models/
+data/*.kld
+data/wikitext-2-raw/
+data/wikitext-2-raw-v1.zip
+# local binaries
+tools/membw
+*.tgz
+.DS_Store
