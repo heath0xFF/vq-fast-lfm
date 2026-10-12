@@ -1,6 +1,6 @@
 # Key findings (curated)
 
-_Updated after E00–E13. Device: Ventuno Q (QCS8275, Hexagon v75). Model: LFM2.5-2.6B Q4_0._
+_Updated after E00–E14 and D00–D02. Device: Ventuno Q (QCS8275, Hexagon v75). Sections 1–7: LFM2.5-2.6B chat model; sections 8–9: d1 decision models._
 
 ## 1. Which engine? → the Hexagon NPU, by a mile  (E00)
 | | prefill t/s (pp512) | decode t/s |

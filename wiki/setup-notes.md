@@ -26,3 +26,9 @@ back to plain decoding. The underlying llama.cpp (`9425611`) *does* contain DSpa
   `colima ssh -- sudo tee /usr/local/share/ca-certificates/netskope.crt; colima ssh -- sudo update-ca-certificates; colima ssh -- sudo systemctl restart docker`.
 - Build script: `scripts/build_lcpp.sh <build-dir>` (uses preset `arm64-linux-snapdragon-release`).
 - Deploy: scp `pkg-<build>/` to the VQ; run with `LD_LIBRARY_PATH=./lib ADSP_LIBRARY_PATH=./lib`.
+
+## 4. d1 on the HTP: memory-mapping limits
+- Weights are mapped lazily into the DSP (`ggml-hex: fastrpc_mmap failed`, "HTP0 buffer mapping failed … error 0x1"). In practice a single model session handles ≲ ~2 GiB of weights plus buffers: d1-3B **Q4_K_M (1.67 GB) + mmproj Q8_0 (583 MB)** works with defaults; **Q5_K_M (1.94 GB)** needs text-only and small buffers (`-c 1536 -np 3 -ub 128 -b 512`); **Q6_K (2.2 GB) and Q8_0 (2.9 GB)** never map (LFM2.5-2.6B Q8_0 also failed to run on the HTP).
+- d1-omni-600M: use the card's `-b 4096 -ub 4096` only when you need audio / long states; `-b/-ub 1024` is enough for ~240-token text and 89-token image requests and keeps the compute buffer small.
+- The vision encoder runs on the HTP except one `UPSCALE` op (falls back to CPU, harmless). `--no-mmproj-offload` makes image requests ~5–7× slower (1.2 s → 5.5–8.9 s on d1-3B).
+- Logs: server output has ANSI colors and some non-UTF8 bytes → use `LC_ALL=C sed 's/\x1b\[[0-9;]*m//g'` on macOS.

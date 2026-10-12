@@ -24,3 +24,15 @@ Legend: ✅ done · 🔄 in progress · ⏳ queued · ❌ rejected/blocked · �
 | 18 | Task-adaptive speculation (plain fallback when acceptance low; n-gram for copy-heavy) | removes the −22 % chat loss | ⏳ |
 | 19 | Cheaper DSpark draft: Q4_0 draft weights, faster TOP_K/CONCAT on 128k logits | −10..20 ms/cycle | ⏳ |
 | 20 | Understand the 21.0/22.5 t/s bimodality (E13) | +7 % in slow mode | ❓ no root |
+
+## d1 decision models (added later)
+| # | Idea | Expected gain | Status |
+|---|---|---|---|
+| 21 | Serve d1 on the NPU via llama.cpp `/v1/systemone` | – | ✅ D00: 534 ms (3B), D02: 111 ms (omni) |
+| 22 | Better d1-3B weights: imatrix Q4_K_M / Q5_K_M vs published Q4_K_M | 1.6× (imatrix Q4_K_M) to 3.5× (Q5_K_M) lower mean probability error at equal prefill speed | ✅ measured (D01); Q5_K_M doesn't fit with the vision projector |
+| 23 | Quantize the mmproj lower so Q5_K_M + images fits the HTP mapping budget | accuracy for image requests | ⏳ |
+| 24 | Server change: evaluate d1-3B's parent-suffix together with the children in one pass (3–4 passes → 2) | 534 → ~300 ms | ⏳ needs Docker toolchain (C++ in `tools/server`) |
+| 25 | Faster Q4→fp16 dequant kernel (the ~100 ms fixed cost per pass; same work as idea 17) | −20..40 % on d1-3B, helps everything | ⏳ |
+| 26 | omni-then-3B router: use the 600M for confident cases, escalate ambiguous ones to the 3B | up to ~5× on the routed cases (hypothesis: depends on how well uncertainty can be detected) | ⏳ |
+| 27 | Validate both d1 models on the real hackathon task with human labels (my synthetic labels are weak) | trust | ⏳ needs data |
+| 28 | Cross-request batching of decisions (server evaluates one decision batch at a time; throughput flat at 1–4 clients) | omni: higher decisions/s | ⏳ server change |

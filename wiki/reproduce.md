@@ -44,3 +44,16 @@ scripts/qlab.sh my-IQ4_NL IQ4_NL        # quantize + score, appends to results/q
 
 ## 5. Benchmarks on the VQ
 `scripts/qbench.sh`, `scripts/spbench.sh`, `scripts/exp.sh`, `scripts/serve_best.sh` (copy to `~/lfm-fast/` on the board). Pull results back with `scripts/pull_results.sh`; table with `scripts/summarize.py`.
+
+## 6. d1 models
+```bash
+# on the VQ (HF is reachable directly and fast there)
+mkdir -p ~/models/d1 ~/models/d1o
+curl -fL -o ~/models/d1/d1-3B-Q4_K_M.gguf          https://huggingface.co/LiquidAI/d1-3B-GGUF/resolve/main/d1-3B-Q4_K_M.gguf
+curl -fL -o ~/models/d1/mmproj-d1-3B-Q8_0.gguf     https://huggingface.co/LiquidAI/d1-3B-GGUF/resolve/main/mmproj-d1-3B-Q8_0.gguf
+for f in d1-omni-600M-Q8_0.gguf mmproj-d1-omni-600M-Q8_0.gguf; do curl -fL -o ~/models/d1o/$f https://huggingface.co/LiquidAI/d1-omni-600M-GGUF/resolve/main/$f; done
+MODEL=omni ~/lfm-fast/serve_d1.sh        # or MODEL=3b
+```
+Fidelity work (Mac, Metal): download `d1-3B-F16.gguf` + `mmproj-d1-3B-F16.gguf` (and the omni F16 pair) to `models/d1*/`, build `llama-server`/`llama-quantize`/`llama-imatrix` in `third_party/llama.cpp-master/build-mac`, then
+`scripts/d1_fidelity.py --save data/d1/ref_f16_seed1.json` against a running F16 server and `scripts/d1_qlab.sh <name> <type> imat` per format (imatrix `data/d1/imatrix-d1.dat` is committed).
+> Note: Colima/Docker were uninstalled after the llama.cpp cross-build. Rebuilding or patching llama.cpp for the NPU means redoing §2 (reinstall colima+docker, import the Netskope CA, pull the toolchain image). The prebuilt NPU binaries on the VQ (`~/lfm-fast/lcpp-master`) are what the d1 experiments use.

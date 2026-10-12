@@ -1,6 +1,6 @@
-# vq-fast-lfm — LFM2.5-2.6B as fast as possible on the Arduino Ventuno Q
+# vq-fast-lfm — Liquid AI models as fast as possible on the Arduino Ventuno Q
 
-**Focus update:** work is now on Liquid AI's **d1-3B decision model** (see `experiments/D*.md`); the LFM2.5-2.6B chat results below stay valid and carry over (same backbone, same NPU kernels).
+**Focus update:** work has moved to Liquid AI's **d1 decision models** (d1-3B and d1-omni-600M; `experiments/D*.md`, [findings §8–9](findings.md)); the LFM2.5-2.6B chat results (E-series) stay valid and carry over (same backbone, same NPU kernels).
 
 **Original goal:** maximize inference speed of Liquid AI's LFM2.5-2.6B (Q4_0 GGUF) on the Ventuno Q
 (Qualcomm Dragonwing IQ-8275 / QCS8275) using every tool available: GenieX, llama.cpp
@@ -25,7 +25,14 @@
 | E10 | + **DSpark** speculative (lossless), n-max 9 | – | math 25.3, code 24.3, json 20.6, chat 16.2 (plain ≈ 20.8); echo-style prompt 42.3 | task dependent; small-batch HTP cost is the limiter (the 42.3 case is the model copying its input verbatim) |
 | E14 | + **n-gram** speculation (`ngram-mod`, match 4) | – | edit-text 26.3 vs 22.4 plain (+17 %), edit-code +5 %, otherwise = plain | free: no draft model, never slower in tests |
 
-**Best known recipe today:** `scripts/serve_best.sh` (plain, QAD Q4_0) or `SPEC=1 scripts/serve_best.sh` (DSpark) on the VQ.
+### d1 decision models (D-series, `POST /v1/systemone`, HTP0, Q-format per model)
+| # | model / config | 3-question decision | image + question | notes |
+|---|---|---:|---:|---|
+| D00 | d1-3B Q4_K_M | 534 ms (1.9/s) | 1.2 s | 3–4 NPU passes per request, each ≥ 111 ms (HMX fixed cost) |
+| D01 | d1-3B Q5_K_M (imatrix) | ~590 ms, text only | – | same prefill speed as Q4_K_M, 3.5× lower probability error; only fits text-only (HTP mapping limit) |
+| D02 | **d1-omni-600M Q8_0** | **111 ms (8.9/s)** | **119 ms** (audio 11 s: ~1.5 s) | one NPU pass per request; Q8_0 ≈ lossless; less calibrated than the 3B |
+
+**Best known recipes today:** chat model: `scripts/serve_best.sh` (plain, QAD Q4_0) or `SPEC=ngram` / `SPEC=1` (n-gram / DSpark). d1: `scripts/serve_d1.sh` (`MODEL=omni` default, or `MODEL=3b`).
 
 _See [findings.md](findings.md) for the curated conclusions and [experiments/](experiments/) for the raw log of each test._
 
