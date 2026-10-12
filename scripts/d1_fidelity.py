@@ -23,6 +23,34 @@ def ticket(rng): return "Customer message: " + rng.choice(A) + ", " + rng.choice
 def dataset(seed):
     rng = random.Random(seed)
     return [(sensor(rng), SENS_Q) for _ in range(40)] + [(ticket(rng), TICK_Q) for _ in range(40)]
+def labels(state):
+    """Rule-based ground truth for the synthetic set (None = ambiguous, excluded)."""
+    try:
+        d = json.loads(state)
+        t = d["temp_c"]; spike = "sudden" in d["motion"]
+        hot = t >= 55
+        return {"alert": hot or spike, "category": "thermal" if hot else ("motion" if spike else "normal")}
+    except Exception:
+        pass
+    a = state.split(": ", 1)[1]
+    team = next((v for k, v in [("charged twice", "billing"), ("billed after I cancelled", "billing"), ("invoices", "billing"), ("app crashes", "technical"),
+                 ("cannot log in", "technical"), ("500 error", "technical"), ("did not make", "fraud"), ("another country", "fraud")] if k in a), None)
+    refund_txt = ("refund" in a) or ("money back" in a)
+    out = {"team": team}
+    if refund_txt: out["refund"] = True
+    elif team in ("technical", "fraud"): out["refund"] = False
+    return out
+def accuracy(states, ans):
+    n_a = c_a = n_c = c_c = 0; brier = []
+    for (s, _), x in zip(states, ans):
+        L = labels(s)
+        for k, v in L.items():
+            if v is None or k not in x: continue
+            if k in ("alert", "refund"):
+                n_a += 1; p = x[k]["noul"]; c_a += (p >= .5) == v; brier.append((p - float(v)) ** 2)
+            else:
+                n_c += 1; c_c += x[k]["choice"] == v
+    return f"labels: noul acc={c_a}/{n_a} brier={st.mean(brier):.3f} | choice acc={c_c}/{n_c}"
 def post(url, body):
     req = urllib.request.Request(url + "/v1/systemone", json.dumps(body).encode(), {"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=300) as r: return json.load(r)
@@ -32,8 +60,9 @@ def collect(url, seed):
     return out, (time.perf_counter() - t) / 80 * 1000
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--url", default="http://127.0.0.1:8097"); ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--save"); ap.add_argument("--ref"); ap.add_argument("--label", default="")
+    ap.add_argument("--save"); ap.add_argument("--ref"); ap.add_argument("--label", default=""); ap.add_argument("--acc", action="store_true")
     a = ap.parse_args(); ans, ms = collect(a.url, a.seed)
+    if a.acc: print(f"{a.label:<18} {accuracy(dataset(a.seed), ans)} | {ms:.0f} ms/decision")
     if a.save: json.dump(ans, open(a.save, "w")); print(f"saved {len(ans)} decisions ({ms:.0f} ms each)")
     if a.ref:
         ref = json.load(open(a.ref)); dn, dc, ds, agree, flips, n_c, n_n = [], [], [], 0, 0, 0, 0
