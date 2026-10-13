@@ -2,7 +2,8 @@
 """d1 fidelity harness (stdlib). Sends a fixed, seeded set of decisions to a llama-server /v1/systemone.
   --save ref.json : store answers (use the F16 model as the reference)
   --ref  ref.json : compare to stored reference -> mean/max |dP| for noul, choice-prob L1, score error, top-1 agreement, 0.5-threshold flips
-Dataset: 40 sensor states (alert/category/severity) + 40 support tickets (refund/team/urgency); seed picks content, --seed 1 = eval set, --seed 2 = calibration set.
+Dataset: 40 sensor states + 40 support tickets. Seed 1 is frozen for the saved references.
+Different seeds can repeat tickets; use d1_calibration.py to check or filter calibration inputs.
 """
 import argparse, json, random, statistics as st, urllib.request, time, sys
 SENS_Q = {"alert": {"type": "noul", "instructions": "Does this state need a human alert right now?"},
@@ -74,4 +75,5 @@ def main():
                     ks = rq["probabilities"].keys(); dc.append(sum(abs(q["probabilities"][o] - rq["probabilities"][o]) for o in ks) / 2); n_c += 1; agree += q["choice"] == rq["choice"]
                 else: ds.append(abs(q["score"] - rq["score"]) / (len(rq["probabilities"]) - 1))
         print(f"{a.label:<18} noul: mean|dP|={st.mean(dn):.4f} max={max(dn):.3f} flips@0.5={flips}/{n_n} | choice: TV={st.mean(dc):.4f} top1={agree}/{n_c} | score: mean|dLevel|/range={st.mean(ds):.4f} max={max(ds):.3f} | {ms:.0f} ms/decision")
-main()
+if __name__ == '__main__':
+    main()

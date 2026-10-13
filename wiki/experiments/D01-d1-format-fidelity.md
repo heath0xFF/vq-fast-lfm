@@ -8,6 +8,8 @@ Reference = **F16 GGUF on llama.cpp/Metal** (which matches the transformers-fp32
 imatrix for the quantized variants: `data/d1/imatrix-d1.dat`, computed from 720 `systemone`-formatted prompts (different seeds than the eval set). `scripts/d1_qlab.sh`, table in `results/d1_quant.txt`.
 Metrics: noul mean/max |ΔP| and number of decisions whose P crosses 0.5 vs the reference; choice total-variation distance and top-1 agreement; score expected-level error / range.
 
+**Offline review correction:** different seeds did not give separate datasets. Of the 40 evaluation ticket rows, 32 occur verbatim in calibration (23 distinct tickets). No evaluation sensor state occurs verbatim. These imatrix results may therefore overstate quality on new inputs. `scripts/d1_calibration.py` removes the 153 matching calibration prompts and keeps 567; see [the rebuild steps](../reproduce.md#6-d1-models). The table, saved references, calibration file, and imatrix below remain historical and unchanged. A clean matrix and new weights have not yet been built.
+
 | format | size | noul mean\|ΔP\| (max) | flips @0.5 (of 80) | choice TV | choice top-1 (of 80) | score err |
 |---|---:|---:|---:|---:|---:|---:|
 | Q8_0 | 2.87 GB | 0.0027 (0.011) | 1 | 0.0044 | 79 | 0.0015 |

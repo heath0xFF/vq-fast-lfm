@@ -4,7 +4,7 @@
 #   ngram:   SPEC=ngram ./serve_best.sh      (no draft model; free when nothing matches, ~2x on edit/copy-style outputs -- E14)
 #   dspark:  SPEC=1 ./serve_best.sh          (+6..22% on code/math, ~0 on JSON, -8..-22% on free-form chat -- E10)
 # Env: PORT (8080), CORE (2 = prime A78 core), CTX (8192), MODEL, DRAFT, NMAX (9)
-source ~/lfm-fast/lenv-master.sh
+source ~/lfm-fast/lenv-master.sh || exit 1
 PORT=${PORT:-8080}; CORE=${CORE:-2}; CTX=${CTX:-8192}; NMAX=${NMAX:-9}
 MODEL=${MODEL:-$M_QAD}; DRAFT=${DRAFT:-$D_Q8}
 ARGS=(-m "$MODEL" --device HTP0 -ngl 99 -fa on -t 1 -c "$CTX" --host 0.0.0.0 --port "$PORT" --jinja --temp 0.1 --top-k 50)

@@ -15,6 +15,9 @@ DSpark speculative decoding gives +6–22 % on code/math but loses on free-form 
 
 Everything is documented in **[wiki/](wiki/README.md)** – start with [`wiki/findings.md`](wiki/findings.md); every experiment has a page in [`wiki/experiments/`](wiki/experiments/). How to rebuild: [`wiki/reproduce.md`](wiki/reproduce.md).
 Run on the VQ: `scripts/serve_best.sh` (chat model) and `scripts/serve_d1.sh` (`MODEL=omni|3b`).
+Offline checks: `python3 -m unittest discover -s tests -v` (no device or models needed).
+
+**Quality caveat:** the historical d1 imatrix includes some evaluation tickets. Existing scores are preserved, but need a clean rerun. See [D01](wiki/experiments/D01-d1-format-fidelity.md) and the [calibration rebuild steps](wiki/reproduce.md#6-d1-models).
 
 ```
 wiki/       findings, hardware, methodology, setup notes, ideas backlog, per-experiment pages

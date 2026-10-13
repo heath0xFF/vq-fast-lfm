@@ -42,6 +42,7 @@ _See [findings.md](findings.md) for the curated conclusions and [experiments/](e
 - [setup-notes.md](setup-notes.md) – environment gotchas & how-to (libcdsprpc, OpenCL ICD, Docker/Netskope CA, builds)
 - [findings.md](findings.md) – curated key findings
 - [ideas.md](ideas.md) – backlog of avenues, with status
+- [next-tests.md](next-tests.md) – offline preparation, ordered board tests, and acceptance checks
 - [experiments/](experiments/) – one page per experiment (E00, E01, … for LFM2.5-2.6B chat; **D00, D01, … for the d1-3B decision model**)
 
 ## Repo layout

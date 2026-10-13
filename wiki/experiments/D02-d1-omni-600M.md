@@ -12,7 +12,7 @@ Same tests as D00/D01: `scripts/d1bench.py` (latency), `scripts/d1_fidelity.py` 
 | throughput, 4 concurrent | 9.1 /s | 8.5 /s | 1.87 /s | – |
 | 256×256 image + 1 question | **119 ms** | 140 ms | 1198 ms | 1875 ms |
 | 11 s audio clip + 2 questions (375 tok) | **~1.5 s** (`-ub 4096`) | – | n/a (no audio) | – |
-- **One NPU pass per request** (profile: tokens=241 / 217 / 241 per request, 100–107 ms of op time each), i.e. all questions are batched in one pass, unlike d1-3B's 3–4 passes → the ~100 ms fixed cost is paid once, and small weights make it much cheaper than for the 3B.
+- **One NPU pass per request** (profile: tokens=241 / 217 / 241 per request, 100–107 ms of op time each), i.e. all questions are batched in one pass, unlike d1-3B's 3–4 passes. This is total operation time, not evidence of a 100 ms fixed dequantization cost. Measure the cost against state length and question count before choosing a kernel change.
 - Within that pass: MUL_MAT_NX 22 ms, MUL_MAT 19 ms, FLASH_ATTN_EXT 14 ms (full bidirectional attention over the batch), rest many small ops.
 - Concurrency doesn't raise throughput (server evaluates one decision batch at a time).
 - Vision encoder on the NPU too (one unsupported op, `UPSCALE`, falls back to CPU).
@@ -38,4 +38,4 @@ Labels: alert = temp ≥ 55 °C or "sudden … g spike"; category = thermal/moti
 
 ## Take-aways
 - Speed: ~5× faster than the 3B for text, ~10× for images, 8.9 decisions/s, plus audio at ~1.5 s — all on the NPU, with Q8_0 (use that, not F16).
-- Quality: not a drop-in replacement for the 3B on numeric/sensor-style reasoning. Needs task-specific evaluation before trusting thresholds; a hybrid (small model first, 3B only for uncertain/ambiguous cases) is the natural pattern.
+- Quality: not a drop-in replacement for the 3B on numeric/sensor-style reasoning. A confidence-only router is not supported by these results: in the saved Omni F16 answers, 31 of 67 rule-labeled binary questions have at least 99% confidence, but four are wrong under those rules. The labels are weak, but the model can be confidently wrong. Validate routing on real labeled tasks and test whether both models can stay loaded.

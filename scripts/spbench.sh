@@ -1,6 +1,7 @@
 #!/bin/bash
 # On the VQ: plain vs DSpark decode speed grid. usage: spbench.sh <target.gguf> <draft.gguf> <nmax list> [prompts...]
-source ~/lfm-fast/lenv-master.sh; cd $LFM
+source ~/lfm-fast/lenv-master.sh || exit 1
+cd "$LFM" || exit 1
 T=$1; D=$2; NMAXS=$3; shift 3; PROMPTS=${@:-"chat code math summarize json"}
 CORE=${CORE:-2}; NGEN=${NGEN:-200}; PMIN=${PMIN:-0}; SKIP_PLAIN=${SKIP_PLAIN:-0}
 strip() { sed 's/\x1b\[[0-9;]*m//g'; }
