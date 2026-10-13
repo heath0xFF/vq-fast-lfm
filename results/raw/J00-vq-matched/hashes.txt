@@ -1,0 +1,13 @@
+16aff27ea2eefdc32b9897f43854a5d3170c1dc8dccb9c756905af30a4e22402  /home/arduino/models/d1/d1-3B-Q4_K_M.gguf
+2505920ce464b7c54acd8b7b74a931c0c671f06d0c8833760b2fbceeb253e92a  /home/arduino/models/d1/mmproj-d1-3B-Q8_0.gguf
+cd94463f4cac9c700ec6750df8df005bb6846de410e159d1f5e985e1171693d3  /home/arduino/models/d1o/d1-omni-600M-Q8_0.gguf
+df887978550cdbb45f0f57d7b436a0f844689f9f561395a144ced500606c3a89  /home/arduino/models/d1o/mmproj-d1-omni-600M-Q8_0.gguf
+59dfb9a4acb36fe2a2affc14bacbee2920ff435cb13cc314a08c13f66ba7860e  /home/arduino/lfm-fast/jfk.wav
+a247afd6414918eac8e520a9e6137dc271235461ecbe1180462221d5b8d40b03  /home/arduino/.cache/geniex/models/LiquidAI/LFM2.5-2.6B-GGUF/LFM2.5-2.6B-QAD-Q4_0.gguf
+815b22bb99c8f63ee59791a9c0678bb90e9bd5574322ef959e22c98578aa5365  /home/arduino/lfm-fast/lcpp-master/bin/llama-server
+6a9e714e96d1c72a344ce57427765fb70c59dd9768b12295205c582e6a8fd0b5  /home/arduino/lfm-fast/lcpp-master/bin/llama-bench
+aed9b7453ad2114c3525dd8752ac7f96798f876cd79458c3cebb381033423eee  /home/arduino/lfm-fast/J00-tools/d1_fidelity.py
+de8b65ececb10bf76b0c521760b800fb269520c711da68cdc5e8dd7db9cad224  /home/arduino/lfm-fast/J00-tools/d1bench.py
+252defaddb6bed16f399bfe46af50a354e0a92c1928442a2d0a408f3a449a86f  /home/arduino/lfm-fast/J00-tools/decisionbench.py
+03eb2128caad1cdd140d32e5e643b0a6b5c891d027bbe17dc4b16364e6884deb  /home/arduino/lfm-fast/J00-tools/specbench.py
+c17698919676e2ed0e31a9a9daf815fb2dd661f7d855e51a84989df2c8f2cbd6  /home/arduino/lfm-fast/J00-tools/d1_run.sh

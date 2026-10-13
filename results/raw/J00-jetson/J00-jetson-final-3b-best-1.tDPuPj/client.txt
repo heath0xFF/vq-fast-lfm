@@ -1,0 +1,8 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-best-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-best-text-1.json -n 100 --warm 5
+3b-best-1 text {"p50_ms": 413.0774871446192, "p95_ms": 427.4055613204837, "requests_per_second": 2.401792094205087, "wall_seconds": 41.635577134788036}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label 3b-best-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-best-image-1.json -n 10 --warm 2
+3b-best-1 image {"p50_ms": 375.5257623270154, "p95_ms": 376.1746259406209, "requests_per_second": 2.6630678814733293, "wall_seconds": 3.7550676306709647}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/d1_fidelity.py --url http://127.0.0.1:8098 --ref /home/heath/lfm-jetson-J00.jxHb0T/tools/ref_f16_seed1.json --save /home/heath/lfm-jetson-J00.jxHb0T/results/fidelity-3b-best.json --label 3b-best --acc
+3b-best            labels: noul acc=59/67 brier=0.083 | choice acc=56/80 | 421 ms/decision
+saved 80 decisions (421 ms each)
+3b-best            noul: mean|dP|=0.0037 max=0.021 flips@0.5=1/80 | choice: TV=0.0042 top1=78/80 | score: mean|dLevel|/range=0.0024 max=0.011 | 421 ms/decision

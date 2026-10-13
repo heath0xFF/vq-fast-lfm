@@ -1,0 +1,13 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label draft-F16 --output /home/heath/lfm-jetson-J00.jxHb0T/results/draft-F16.json -n 128 -r 2 --warm 1
+draft-F16 code warm: 33.99 tok/s, 4266 ms, draft=218, accepted=101
+draft-F16 math warm: 34.19 tok/s, 3927 ms, draft=239, accepted=100
+draft-F16 chat warm: 23.77 tok/s, 5538 ms, draft=340, accepted=88
+draft-F16 code measured: 36.07 tok/s, 3731 ms, draft=218, accepted=101
+draft-F16 math measured: 34.11 tok/s, 3934 ms, draft=239, accepted=100
+draft-F16 chat measured: 23.58 tok/s, 5578 ms, draft=340, accepted=88
+draft-F16 code measured: 35.85 tok/s, 3750 ms, draft=218, accepted=101
+draft-F16 math measured: 34.03 tok/s, 3941 ms, draft=239, accepted=100
+draft-F16 chat measured: 23.65 tok/s, 5562 ms, draft=340, accepted=88
+draft-F16 code: median 35.96 tok/s, 3741 ms/request
+draft-F16 math: median 34.07 tok/s, 3937 ms/request
+draft-F16 chat: median 23.61 tok/s, 5570 ms/request

@@ -1,0 +1,4 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label omni-f16-projector --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-f16-projector-image.json -n 10 --warm 2
+omni-f16-projector image {"p50_ms": 64.91896556690335, "p95_ms": 65.64051937311888, "requests_per_second": 15.371870108442208, "wall_seconds": 0.6505389343947172}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label omni-f16-projector --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-f16-projector-audio.json -n 5 --warm 1
+omni-f16-projector audio {"p50_ms": 619.6202216669917, "p95_ms": 625.1370310783386, "requests_per_second": 1.602211236480715, "wall_seconds": 3.1206871392205358}

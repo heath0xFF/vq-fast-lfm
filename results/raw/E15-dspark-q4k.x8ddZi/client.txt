@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label dspark-q4k --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/dspark-q4k.json -n 128 -r 3 --warm 1
+dspark-q4k code warm: 29.51 tok/s, 4633 ms, draft=217, accepted=101
+dspark-q4k math warm: 30.20 tok/s, 4463 ms, draft=221, accepted=102
+dspark-q4k chat warm: 17.56 tok/s, 7481 ms, draft=376, accepted=84
+dspark-q4k code measured: 29.69 tok/s, 4530 ms, draft=217, accepted=101
+dspark-q4k math measured: 30.17 tok/s, 4463 ms, draft=221, accepted=102
+dspark-q4k chat measured: 17.55 tok/s, 7484 ms, draft=376, accepted=84
+dspark-q4k code measured: 29.66 tok/s, 4532 ms, draft=217, accepted=101
+dspark-q4k math measured: 30.07 tok/s, 4478 ms, draft=221, accepted=102
+dspark-q4k chat measured: 17.54 tok/s, 7488 ms, draft=376, accepted=84
+dspark-q4k code measured: 29.66 tok/s, 4535 ms, draft=217, accepted=101
+dspark-q4k math measured: 29.96 tok/s, 4494 ms, draft=221, accepted=102
+dspark-q4k chat measured: 17.50 tok/s, 7506 ms, draft=376, accepted=84
+dspark-q4k code: median 29.66 tok/s, 4532 ms/request
+dspark-q4k math: median 30.07 tok/s, 4478 ms/request
+dspark-q4k chat: median 17.54 tok/s, 7488 ms/request

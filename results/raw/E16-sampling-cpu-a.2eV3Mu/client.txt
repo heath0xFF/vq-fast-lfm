@@ -1,0 +1,11 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt --label sampling-cpu-a --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/sampling-cpu-a.json -n 128 -r 3 --warm 1
+sampling-cpu-a code warm: 33.26 tok/s, 4143 ms, draft=209, accepted=102
+sampling-cpu-a math warm: 32.65 tok/s, 4147 ms, draft=221, accepted=102
+sampling-cpu-a code measured: 33.42 tok/s, 4049 ms, draft=209, accepted=102
+sampling-cpu-a math measured: 32.65 tok/s, 4143 ms, draft=221, accepted=102
+sampling-cpu-a code measured: 33.54 tok/s, 4035 ms, draft=209, accepted=102
+sampling-cpu-a math measured: 32.60 tok/s, 4147 ms, draft=221, accepted=102
+sampling-cpu-a code measured: 33.44 tok/s, 4047 ms, draft=209, accepted=102
+sampling-cpu-a math measured: 32.55 tok/s, 4154 ms, draft=221, accepted=102
+sampling-cpu-a code: median 33.44 tok/s, 4047 ms/request
+sampling-cpu-a math: median 32.60 tok/s, 4147 ms/request

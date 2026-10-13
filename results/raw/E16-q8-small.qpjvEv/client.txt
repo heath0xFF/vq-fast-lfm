@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label q8-small --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/q8-small.json -n 128 -r 3 --warm 1
+q8-small code warm: 30.62 tok/s, 4443 ms, draft=209, accepted=102
+q8-small math warm: 29.89 tok/s, 4505 ms, draft=221, accepted=102
+q8-small chat warm: 19.18 tok/s, 6865 ms, draft=340, accepted=88
+q8-small code measured: 30.64 tok/s, 4396 ms, draft=209, accepted=102
+q8-small math measured: 29.86 tok/s, 4507 ms, draft=221, accepted=102
+q8-small chat measured: 19.17 tok/s, 6870 ms, draft=340, accepted=88
+q8-small code measured: 30.61 tok/s, 4400 ms, draft=209, accepted=102
+q8-small math measured: 29.80 tok/s, 4516 ms, draft=221, accepted=102
+q8-small chat measured: 19.13 tok/s, 6884 ms, draft=340, accepted=88
+q8-small code measured: 30.56 tok/s, 4408 ms, draft=209, accepted=102
+q8-small math measured: 29.68 tok/s, 4532 ms, draft=221, accepted=102
+q8-small chat measured: 19.07 tok/s, 6906 ms, draft=340, accepted=88
+q8-small code: median 30.61 tok/s, 4400 ms/request
+q8-small math: median 29.80 tok/s, 4516 ms/request
+q8-small chat: median 19.13 tok/s, 6884 ms/request

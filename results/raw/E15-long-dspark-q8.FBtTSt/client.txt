@@ -1,0 +1,5 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt --label long-dspark-q8 --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/long-dspark-q8.json -n 512 -r 1 --warm 0
+long-dspark-q8 code measured: 21.13 tok/s, 24506 ms, draft=1264, accepted=369
+long-dspark-q8 math measured: 27.61 tok/s, 18770 ms, draft=967, accepted=403
+long-dspark-q8 code: median 21.13 tok/s, 24506 ms/request
+long-dspark-q8 math: median 27.61 tok/s, 18770 ms/request

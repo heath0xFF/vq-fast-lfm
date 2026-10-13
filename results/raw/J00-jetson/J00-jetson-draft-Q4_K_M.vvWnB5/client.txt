@@ -1,0 +1,13 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label draft-Q4_K_M --output /home/heath/lfm-jetson-J00.jxHb0T/results/draft-Q4_K_M.json -n 128 -r 2 --warm 1
+draft-Q4_K_M code warm: 40.50 tok/s, 3497 ms, draft=217, accepted=101
+draft-Q4_K_M math warm: 40.66 tok/s, 3335 ms, draft=239, accepted=100
+draft-Q4_K_M chat warm: 26.19 tok/s, 5041 ms, draft=366, accepted=85
+draft-Q4_K_M code measured: 42.39 tok/s, 3206 ms, draft=217, accepted=101
+draft-Q4_K_M math measured: 40.81 tok/s, 3319 ms, draft=239, accepted=100
+draft-Q4_K_M chat measured: 26.13 tok/s, 5047 ms, draft=366, accepted=85
+draft-Q4_K_M code measured: 42.49 tok/s, 3196 ms, draft=217, accepted=101
+draft-Q4_K_M math measured: 40.76 tok/s, 3323 ms, draft=239, accepted=100
+draft-Q4_K_M chat measured: 26.22 tok/s, 5035 ms, draft=366, accepted=85
+draft-Q4_K_M code: median 42.44 tok/s, 3201 ms/request
+draft-Q4_K_M math: median 40.79 tok/s, 3321 ms/request
+draft-Q4_K_M chat: median 26.18 tok/s, 5041 ms/request

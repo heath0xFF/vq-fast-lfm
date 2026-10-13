@@ -17,8 +17,14 @@ For our own llama.cpp builds we use `llama-bench` (pp/tg) and `llama-completion`
 ## Harness
 - `scripts/env.sh` → copied to `~/lfm-fast/env.sh` on the VQ (LD_LIBRARY_PATH, Adreno libs, `OCL_ICD_FILENAMES`, libcdsprpc symlink, model paths).
 - `scripts/exp.sh <name> "<ENV=VAL ...>" <geniex-bench args>` runs an experiment and stores `result.json/log.txt/cmd.txt` in `~/lfm-fast/results/<name>/`.
-- `scripts/pull_results.sh` rsyncs into `results/raw/`; `scripts/summarize.py [filter]` prints a markdown table (medians).
+- `bash scripts/pull_results.sh [ssh-alias-or-user@host]` rsyncs JSON results, commands, logs, and hash manifests into `results/raw/` (default destination: `vq`). Supply an explicit destination if that SSH alias is not configured. `scripts/summarize.py [filter]` prints a markdown table for GenieX results; `specbench.py` prints its own server-result medians.
 - `python3 scripts/prof_agg.py <log.txt>` reports batch time and per-operation means, grouped by the token count in the first model norm. It reads batch headers before their operations and rejects incomplete or mixed-device logs. Counts that cannot be read are marked `unknown`, not decode. Profile timing includes measurement overhead; use separate unprofiled runs for latency claims.
+
+## Server-based speculation checks
+
+`scripts/specbench.py` sends fixed raw chat-templated prompts to `/completion`, with greedy sampling, prompt caching disabled, and token IDs returned. It saves full responses, request settings, wall time, warmup markers, and server timing fields to a new JSON file. It refuses to overwrite an existing file and marks interrupted/failed runs incomplete. Use it for plain/DSpark comparisons on the same server executable; repeated prompts would warm an n-gram pool and are not a valid cold n-gram test.
+
+Compare token IDs as well as throughput. If output differs, the speed ratio is no longer a same-output comparison. Record output limits and whether the task finished: E15's 128- and 512-token samples still contained unfinished reasoning. See [E15](experiments/E15-dspark-server-recheck.md) for the live results.
 
 ## Conventions
 - Experiment IDs `Exx-short-name`, one wiki page each in `wiki/experiments/`.

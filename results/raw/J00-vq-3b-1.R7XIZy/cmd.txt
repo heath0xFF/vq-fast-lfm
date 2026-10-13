@@ -1,0 +1,3 @@
+SERVER: taskset -c 2 /home/arduino/lfm-fast/lcpp-master/bin/llama-server -m /home/arduino/models/d1/d1-3B-Q4_K_M.gguf --mmproj /home/arduino/models/d1/mmproj-d1-3B-Q8_0.gguf --device HTP0 -ngl 99 -fa on -t 1 -c 8192 -np 4 -b 1024 -ub 1024 --host 127.0.0.1 --port 8098 
+CLIENT: python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py text --label vq-3b-1 --output /home/arduino/lfm-fast/results/J00-vq-matched/3b-text-1.json -n 100 --warm 5
+CLIENT: python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py image --label vq-3b-1 --output /home/arduino/lfm-fast/results/J00-vq-matched/3b-image-1.json -n 10 --warm 2

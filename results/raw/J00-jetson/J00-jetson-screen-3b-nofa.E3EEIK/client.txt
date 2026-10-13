@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-nofa --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-3b-nofa.json -n 25 --warm 3
+3b-nofa text {"p50_ms": 427.86839231848717, "p95_ms": 443.69797594845295, "requests_per_second": 2.312646786661518, "wall_seconds": 10.810124634765089}

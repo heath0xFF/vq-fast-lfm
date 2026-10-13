@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label plain-before --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/plain-before.json -n 128 -r 3 --warm 1
+plain-before code warm: 22.39 tok/s, 5935 ms, draft=0, accepted=0
+plain-before math warm: 22.42 tok/s, 5895 ms, draft=0, accepted=0
+plain-before chat warm: 22.49 tok/s, 5870 ms, draft=0, accepted=0
+plain-before code measured: 22.46 tok/s, 5882 ms, draft=0, accepted=0
+plain-before math measured: 22.43 tok/s, 5893 ms, draft=0, accepted=0
+plain-before chat measured: 22.44 tok/s, 5884 ms, draft=0, accepted=0
+plain-before code measured: 22.39 tok/s, 5902 ms, draft=0, accepted=0
+plain-before math measured: 22.46 tok/s, 5886 ms, draft=0, accepted=0
+plain-before chat measured: 22.37 tok/s, 5901 ms, draft=0, accepted=0
+plain-before code measured: 22.44 tok/s, 5889 ms, draft=0, accepted=0
+plain-before math measured: 22.37 tok/s, 5909 ms, draft=0, accepted=0
+plain-before chat measured: 22.41 tok/s, 5889 ms, draft=0, accepted=0
+plain-before code: median 22.44 tok/s, 5889 ms/request
+plain-before math: median 22.43 tok/s, 5893 ms/request
+plain-before chat: median 22.41 tok/s, 5889 ms/request

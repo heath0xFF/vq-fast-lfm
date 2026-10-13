@@ -1,0 +1,26 @@
+{
+  "observed_utc": "2026-10-13T18:56:33.936068+00:00",
+  "board": "NVIDIA Jetson Orin Nano Developer Kit, 8 GB",
+  "os": "Linux-6.8.12-1021-tegra-aarch64-with-glibc2.39",
+  "power_mode": "NV Power Mode: 15W\n0",
+  "cuda_toolkit": "nvcc: NVIDIA (R) Cuda compiler driver\nCopyright (c) 2005-2026 NVIDIA Corporation\nBuilt on Fri_May_08_10:52:52_AM_PDT_2026\nCuda compilation tools, release 13.2, V13.2.86\nBuild cuda_13.2.r13.2/compiler.37953736_0\n",
+  "source_commit": "8bb3cf0d216a5ae48360179f2931daf284be4d01",
+  "source_patch": "source.patch",
+  "cpu_max_khz": "1510400",
+  "gpu_available_hz": "306000000 408000000 510000000 612000000 624750000",
+  "extra_environment": {
+    "lfm-graph-opt.json": {
+      "GGML_CUDA_GRAPH_OPT": "1"
+    }
+  },
+  "build_options": [
+    "CMAKE_BUILD_TYPE=Release",
+    "GGML_CUDA=ON",
+    "CMAKE_CUDA_ARCHITECTURES=87-real",
+    "CMAKE_CUDA_COMPILER=/usr/local/cuda-13.2/bin/nvcc",
+    "LLAMA_OPENSSL=OFF",
+    "LLAMA_BUILD_TESTS=OFF",
+    "LLAMA_BUILD_EXAMPLES=ON",
+    "GGML_CUDA_NCCL=OFF"
+  ]
+}

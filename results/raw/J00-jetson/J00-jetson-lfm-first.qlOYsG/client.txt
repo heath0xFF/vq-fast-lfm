@@ -1,0 +1,10 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label jetson-lfm-first --output /home/heath/lfm-jetson-J00.jxHb0T/results/lfm-first.json -n 128 -r 1 --warm 1
+jetson-lfm-first code warm: 19.23 tok/s, 6864 ms, draft=0, accepted=0
+jetson-lfm-first math warm: 19.23 tok/s, 6794 ms, draft=0, accepted=0
+jetson-lfm-first chat warm: 19.31 tok/s, 6754 ms, draft=0, accepted=0
+jetson-lfm-first code measured: 19.38 tok/s, 6744 ms, draft=0, accepted=0
+jetson-lfm-first math measured: 19.37 tok/s, 6747 ms, draft=0, accepted=0
+jetson-lfm-first chat measured: 19.43 tok/s, 6713 ms, draft=0, accepted=0
+jetson-lfm-first code: median 19.38 tok/s, 6744 ms/request
+jetson-lfm-first math: median 19.37 tok/s, 6747 ms/request
+jetson-lfm-first chat: median 19.43 tok/s, 6713 ms/request

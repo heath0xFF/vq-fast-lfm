@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-np12-conc4 --output /home/heath/lfm-jetson-J00.jxHb0T/results/throughput-omni-np12.json -n 100 --warm 5 --conc 4
+omni-np12-conc4 text {"p50_ms": 270.1305942609906, "p95_ms": 402.61509642004967, "requests_per_second": 13.959536430217717, "wall_seconds": 7.163561662659049}

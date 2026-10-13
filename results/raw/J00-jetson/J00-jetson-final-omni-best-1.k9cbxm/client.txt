@@ -1,0 +1,10 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-best-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-text-1.json -n 100 --warm 5
+omni-best-1 text {"p50_ms": 73.60470714047551, "p95_ms": 84.91659443825483, "requests_per_second": 13.219594117174488, "wall_seconds": 7.564528767950833}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label omni-best-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-image-1.json -n 10 --warm 2
+omni-best-1 image {"p50_ms": 64.78110374882817, "p95_ms": 65.91367349028587, "requests_per_second": 15.393022392677938, "wall_seconds": 0.6496449979022145}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label omni-best-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-audio-1.json -n 5 --warm 1
+omni-best-1 audio {"p50_ms": 617.7309844642878, "p95_ms": 620.7492016255856, "requests_per_second": 1.610212300032124, "wall_seconds": 3.1051806025207043}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/d1_fidelity.py --url http://127.0.0.1:8098 --ref /home/heath/lfm-jetson-J00.jxHb0T/tools/ref_omni_f16_seed1.json --save /home/heath/lfm-jetson-J00.jxHb0T/results/fidelity-omni-best.json --label omni-best --acc
+omni-best          labels: noul acc=56/67 brier=0.153 | choice acc=52/80 | 72 ms/decision
+saved 80 decisions (72 ms each)
+omni-best          noul: mean|dP|=0.0026 max=0.030 flips@0.5=0/80 | choice: TV=0.0018 top1=80/80 | score: mean|dLevel|/range=0.0025 max=0.011 | 72 ms/decision

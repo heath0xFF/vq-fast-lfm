@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-np12-conc4 --output /home/heath/lfm-jetson-J00.jxHb0T/results/throughput-3b-np12.json -n 100 --warm 5 --conc 4
+3b-np12-conc4 text {"p50_ms": 1301.1211859993637, "p95_ms": 1455.6843722239137, "requests_per_second": 3.0364103230855455, "wall_seconds": 32.93362535350025}

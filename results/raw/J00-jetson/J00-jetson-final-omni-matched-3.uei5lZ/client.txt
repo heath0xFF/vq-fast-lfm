@@ -1,0 +1,6 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-matched-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-text-3.json -n 100 --warm 5
+omni-matched-3 text {"p50_ms": 84.90777714177966, "p95_ms": 92.18527935445309, "requests_per_second": 11.48038384341034, "wall_seconds": 8.710510150529444}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label omni-matched-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-image-3.json -n 10 --warm 2
+omni-matched-3 image {"p50_ms": 74.50491422787309, "p95_ms": 74.9563043937087, "requests_per_second": 13.454312256005833, "wall_seconds": 0.7432561255991459}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label omni-matched-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-audio-3.json -n 5 --warm 1
+omni-matched-3 audio {"p50_ms": 643.0661687627435, "p95_ms": 644.2691590636969, "requests_per_second": 1.546237622048579, "wall_seconds": 3.233655635267496}

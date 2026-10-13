@@ -1,0 +1,244 @@
+{
+  "label": "omni-best-1",
+  "mode": "image",
+  "concurrency": 1,
+  "requests": [
+    {
+      "state": null,
+      "images": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAEM0lEQVR4nO3TQQ3EQBADwSAJf1DHJQdiHpblKhnASjv9fDDsST8AkgTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwrT6A3/tadukTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4EYAJoFn8+y19AicCMAE0i3+/pU/gRAAmgGbx77f0CZwIwATQLP79lj6BEwGYAJrFv9/SJ3AiABNAs/j3W/oETgRgAmgW/35Ln8CJAEwAzeLfb+kTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4EYAJoFn8+y19AicCMAE0i3+/pU/gRAAmgGbx77f0CZwIwATQLP79lj6BEwGYAJrFv9/SJ3AiABNAs/j3W/oETgRgAmgW/35Ln8CJAEwAzeLfb+kTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4qQ8ALgTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEw7Q+Jtf6rw5hx4QAAAABJRU5ErkJggg=="
+      ],
+      "questions": {
+        "red": {
+          "type": "noul",
+          "instructions": "Is there a red object in this picture?"
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "request_index": 0,
+      "warmup": true,
+      "wall_ms": 131.85739796608686,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": true,
+      "wall_ms": 92.4860555678606,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 64.72407840192318,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 64.83812909573317,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 65.91367349028587,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 65.30313286930323,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 65.24649076163769,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 65.7386938109994,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 63.49009554833174,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 63.36462125182152,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 63.74831032007933,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 63.54693043977022,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-F16.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.99993794951877
+          }
+        },
+        "usage": {
+          "input_tokens": 89,
+          "output_tokens": 0
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "summary": {
+    "p50_ms": 64.78110374882817,
+    "p95_ms": 65.91367349028587,
+    "requests_per_second": 15.393022392677938,
+    "wall_seconds": 0.6496449979022145
+  }
+}

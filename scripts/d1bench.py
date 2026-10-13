@@ -89,4 +89,5 @@ def main():
                 lat.append(ms); toks += o["usage"]["input_tokens"]
         wall = time.perf_counter() - t0; lat.sort()
         print(f"n={a.n} conc={a.conc}: p50={lat[len(lat)//2]:.0f} ms  p95={lat[int(len(lat)*0.95)-1]:.0f} ms  throughput={a.n/wall:.2f} decisions/s  ({toks/wall:.0f} input tok/s, {toks/a.n:.0f} tok/decision)")
-main()
+if __name__ == '__main__':
+    main()

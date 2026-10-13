@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label 3b-f16-projector --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-3b-f16-projector-image.json -n 10 --warm 2
+3b-f16-projector image {"p50_ms": 378.8761771284044, "p95_ms": 380.30022755265236, "requests_per_second": 2.638378359437362, "wall_seconds": 3.790206952020526}

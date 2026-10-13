@@ -52,6 +52,26 @@ class ProfileTests(unittest.TestCase):
         ]}))
 
 
+class SummaryTests(unittest.TestCase):
+    def test_mixed_benchmark_formats(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / 'scripts').mkdir()
+            raw = root / 'results/raw'
+            raw.mkdir(parents=True)
+            script = root / 'scripts/summarize.py'
+            shutil.copyfile(ROOT / 'scripts/summarize.py', script)
+            (raw / 'llama-bench.json').write_text('[{"n_prompt": 10, "avg_ts": 99}]')
+            (raw / 'geniex.json').write_text(json.dumps({
+                'device': 'NPU', 'params': {'n_prompt': 64, 'n_gen': 32},
+                'runs': [{'decode_tps': 22.5, 'prefill_tps': 690, 'ttft_us': 100000}],
+            }))
+            result = subprocess.run([sys.executable, str(script)], capture_output=True,
+                                    text=True, check=True)
+            self.assertIn('| geniex | NPU | 64 | 32 |', result.stdout)
+            self.assertNotIn('llama-bench', result.stdout)
+
+
 class CalibrationTests(unittest.TestCase):
     def test_evaluation_set_is_unchanged(self):
         digest = hashlib.sha256(json.dumps(d1_fidelity.dataset(1), sort_keys=True).encode()).hexdigest()
@@ -182,6 +202,15 @@ if os.environ.get('MOCK_QUANT_FAIL'): raise SystemExit(17)
                         self.assertFalse((root / 'child.pid').exists())
                     if kind == 'qlab':
                         self.assertFalse((root / 'results/d1_quant.txt').exists())
+
+    def test_explicit_board_environment(self):
+        with self.fixture('run') as (root, env, args):
+            source = root / 'home/lfm-fast/lenv-master.sh'
+            target = root / 'jetson-env.sh'
+            source.rename(target)
+            result = subprocess.run(args, env={**env, 'LFM_ENV': str(target)},
+                                    capture_output=True, text=True, timeout=15)
+            self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
 
     def test_new_imatrix_and_extra_quantize_args(self):
         with self.fixture('qlab', IMATRIX='data/d1/new.dat') as (root, env, args):

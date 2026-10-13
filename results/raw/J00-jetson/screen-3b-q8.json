@@ -1,0 +1,1976 @@
+{
+  "label": "3b-q8",
+  "mode": "text",
+  "concurrency": 1,
+  "requests": [
+    {
+      "state": "{\"temp_c\": 89.7, \"temp_c_1min_ago\": 78.4, \"motion\": \"sudden 1.8 g spike\", \"seq\": 797926}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 37.8, \"temp_c_1min_ago\": 37.2, \"motion\": \"none\", \"seq\": 936710}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 35.2, \"temp_c_1min_ago\": 34.7, \"motion\": \"sudden 1.0 g spike\", \"seq\": 279267}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 32.7, \"temp_c_1min_ago\": 31.9, \"motion\": \"none\", \"seq\": 23406}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 78.9, \"temp_c_1min_ago\": 64.9, \"motion\": \"none\", \"seq\": 442621}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 36.3, \"temp_c_1min_ago\": 35.8, \"motion\": \"slow drift\", \"seq\": 244406}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 38.1, \"temp_c_1min_ago\": 37.6, \"motion\": \"none\", \"seq\": 436396}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 36.7, \"temp_c_1min_ago\": 36.4, \"motion\": \"none\", \"seq\": 126762}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 40.7, \"temp_c_1min_ago\": 39.8, \"motion\": \"sudden 2.5 g spike\", \"seq\": 532380}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 38.0, \"temp_c_1min_ago\": 38.4, \"motion\": \"sudden 2.8 g spike\", \"seq\": 887302}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 34.7, \"temp_c_1min_ago\": 34.0, \"motion\": \"sudden 2.4 g spike\", \"seq\": 434439}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 34.4, \"temp_c_1min_ago\": 33.6, \"motion\": \"none\", \"seq\": 90667}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 36.1, \"temp_c_1min_ago\": 35.5, \"motion\": \"sudden 2.6 g spike\", \"seq\": 388521}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 30.4, \"temp_c_1min_ago\": 31.3, \"motion\": \"slow drift\", \"seq\": 621998}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 37.8, \"temp_c_1min_ago\": 38.4, \"motion\": \"none\", \"seq\": 807952}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 92.2, \"temp_c_1min_ago\": 84.4, \"motion\": \"none\", \"seq\": 998734}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 34.2, \"temp_c_1min_ago\": 33.4, \"motion\": \"slow drift\", \"seq\": 764831}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 87.4, \"temp_c_1min_ago\": 75.3, \"motion\": \"slow drift\", \"seq\": 848444}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 87.2, \"temp_c_1min_ago\": 84.9, \"motion\": \"sudden 3.8 g spike\", \"seq\": 912271}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 36.7, \"temp_c_1min_ago\": 35.8, \"motion\": \"none\", \"seq\": 434555}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 36.5, \"temp_c_1min_ago\": 36.2, \"motion\": \"sudden 2.8 g spike\", \"seq\": 628993}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 68.0, \"temp_c_1min_ago\": 66.2, \"motion\": \"none\", \"seq\": 837223}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 40.2, \"temp_c_1min_ago\": 39.4, \"motion\": \"none\", \"seq\": 87277}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 35.4, \"temp_c_1min_ago\": 34.9, \"motion\": \"none\", \"seq\": 114807}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 32.2, \"temp_c_1min_ago\": 32.6, \"motion\": \"none\", \"seq\": 552998}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 37.9, \"temp_c_1min_ago\": 37.6, \"motion\": \"none\", \"seq\": 520611}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 30.3, \"temp_c_1min_ago\": 30.5, \"motion\": \"none\", \"seq\": 270973}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    },
+    {
+      "state": "{\"temp_c\": 91.5, \"temp_c_1min_ago\": 84.3, \"motion\": \"slow drift\", \"seq\": 452623}",
+      "questions": {
+        "alert": {
+          "type": "noul",
+          "instructions": "Does this state need a human alert right now?"
+        },
+        "category": {
+          "type": "choice",
+          "instructions": "Which category fits this state best?",
+          "criteria": {
+            "thermal": "Temperature or heat problem",
+            "motion": "Unexpected movement",
+            "normal": "Nothing notable"
+          }
+        },
+        "severity": {
+          "type": "score",
+          "instructions": "How severe is it?",
+          "criteria": [
+            "Low",
+            "Moderate",
+            "Critical"
+          ]
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "request_index": 0,
+      "warmup": true,
+      "wall_ms": 495.82926370203495,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.8534257452058779
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.5522472266284987,
+              "motion": 0.3812077778710875,
+              "normal": 0.06654499550041384
+            },
+            "confidence": 0.328370839942748
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.3705197425670694,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.08836786778153846,
+              "1": 0.4527445218698538,
+              "2": 0.45888761034860787
+            },
+            "confidence": 0.055779613850603815
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 1,
+      "warmup": true,
+      "wall_ms": 411.8822989985347,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.1365276476251773
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.32184697022525544,
+              "motion": 0.007169281500873149,
+              "normal": 0.6709837482738713
+            },
+            "confidence": 0.5064756224108069
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.6067904056709482,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.4411162164444307,
+              "1": 0.5109771614401903,
+              "2": 0.04790662211537894
+            },
+            "confidence": 0.2664657421602855
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 2,
+      "warmup": true,
+      "wall_ms": 425.6012076511979,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.7314506556067257
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.5092112116023066,
+              "motion": 0.38224017773152374,
+              "normal": 0.10854861066616961
+            },
+            "confidence": 0.26381681740345997
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.0729412087622558,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.15302876067207166,
+              "1": 0.6210012698936008,
+              "2": 0.22596996943432754
+            },
+            "confidence": 0.4315019048404012
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 3,
+      "warmup": false,
+      "wall_ms": 410.9676834195852,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.1419013161431402
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.41527610254855857,
+              "motion": 0.006286588479181486,
+              "normal": 0.57843730897226
+            },
+            "confidence": 0.36765596345838997
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.891942557773077,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.17516220621832929,
+              "1": 0.7577330297902645,
+              "2": 0.06710476399140623
+            },
+            "confidence": 0.6365995446853967
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 4,
+      "warmup": false,
+      "wall_ms": 424.67602994292974,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.7554703699777862
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.7853376144585854,
+              "motion": 0.007231205849561659,
+              "normal": 0.20743117969185287
+            },
+            "confidence": 0.6780064216878781
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1478396480654987,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.10846493474354822,
+              "1": 0.6352304824474049,
+              "2": 0.2563045828090469
+            },
+            "confidence": 0.4528457236711073
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 5,
+      "warmup": false,
+      "wall_ms": 412.69322857260704,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.22721906095362243
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.34851095389046094,
+              "motion": 0.07077675036694772,
+              "normal": 0.5807122957425913
+            },
+            "confidence": 0.37106844361388697
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.8184978963807844,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.25695633054855654,
+              "1": 0.6675894425221025,
+              "2": 0.07545422692934096
+            },
+            "confidence": 0.5013841637831538
+          }
+        },
+        "usage": {
+          "input_tokens": 218,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 6,
+      "warmup": false,
+      "wall_ms": 411.97090595960617,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.5970133135670632
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.7182388713951564,
+              "motion": 0.006844625675202673,
+              "normal": 0.274916502929641
+            },
+            "confidence": 0.5773583070927346
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1317286729397438,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.11399702396824694,
+              "1": 0.6402772791237626,
+              "2": 0.2457256969079905
+            },
+            "confidence": 0.4604159186856438
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 7,
+      "warmup": false,
+      "wall_ms": 416.1070426926017,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.08599653969701791
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.23230253756497182,
+              "motion": 0.006470071122767111,
+              "normal": 0.7612273913122611
+            },
+            "confidence": 0.6418410869683917
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.39853973720079794,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.6523518654810342,
+              "1": 0.29675653183713385,
+              "2": 0.05089160268183206
+            },
+            "confidence": 0.4021903941988031
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 8,
+      "warmup": false,
+      "wall_ms": 425.53380969911814,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.8322731329528927
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.5527985221906263,
+              "motion": 0.37189879384534213,
+              "normal": 0.07530268396403157
+            },
+            "confidence": 0.32919778328593946
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.3144523128115577,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.09143333350136673,
+              "1": 0.5026810201857087,
+              "2": 0.40588564631292445
+            },
+            "confidence": 0.2540215302785632
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 9,
+      "warmup": false,
+      "wall_ms": 432.55459517240524,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.8063557372364398
+          },
+          "category": {
+            "type": "choice",
+            "choice": "motion",
+            "probabilities": {
+              "thermal": 0.4448916167522364,
+              "motion": 0.47950814742519215,
+              "normal": 0.07560023582257157
+            },
+            "confidence": 0.21926222113778823
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.258052681200815,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.10884126354049939,
+              "1": 0.5242647917181863,
+              "2": 0.3668939447413143
+            },
+            "confidence": 0.2863971875772794
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 10,
+      "warmup": false,
+      "wall_ms": 423.4649892896414,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.8087183554165566
+          },
+          "category": {
+            "type": "choice",
+            "choice": "motion",
+            "probabilities": {
+              "thermal": 0.3886287305588443,
+              "motion": 0.5244844624083282,
+              "normal": 0.08688680703282749
+            },
+            "confidence": 0.28672669361249237
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.227933701458001,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.08862893931806859,
+              "1": 0.5948084199058619,
+              "2": 0.31656264077606955
+            },
+            "confidence": 0.3922126298587928
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 11,
+      "warmup": false,
+      "wall_ms": 411.2946940585971,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.18058456287030047
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.4913445577392646,
+              "motion": 0.006295615591829109,
+              "normal": 0.5023598266689063
+            },
+            "confidence": 0.2535397400033595
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.0091008141454325,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.11850017927899317,
+              "1": 0.753898827296581,
+              "2": 0.12760099342442582
+            },
+            "confidence": 0.6308482409448715
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 12,
+      "warmup": false,
+      "wall_ms": 425.9853707626462,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.7947566916597175
+          },
+          "category": {
+            "type": "choice",
+            "choice": "motion",
+            "probabilities": {
+              "thermal": 0.34464556318196704,
+              "motion": 0.5555286464926825,
+              "normal": 0.0998257903253503
+            },
+            "confidence": 0.3332929697390238
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1811735516836368,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.09895161328953742,
+              "1": 0.6209232217372885,
+              "2": 0.2801251649731741
+            },
+            "confidence": 0.43138483260593274
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 13,
+      "warmup": false,
+      "wall_ms": 411.83643508702517,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.4383690906698818
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.5322948167316277,
+              "motion": 0.11437543869157181,
+              "normal": 0.3533297445768004
+            },
+            "confidence": 0.29844222509744156
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.9284950552287703,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.19125202076533968,
+              "1": 0.6890009032405504,
+              "2": 0.11974707599410993
+            },
+            "confidence": 0.5335013548608256
+          }
+        },
+        "usage": {
+          "input_tokens": 218,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 14,
+      "warmup": false,
+      "wall_ms": 411.89851704984903,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.23492150398107964
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.44392235156779963,
+              "motion": 0.007176431480133358,
+              "normal": 0.548901216952067
+            },
+            "confidence": 0.3233518254281004
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.7175503002691626,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.34588862453896235,
+              "1": 0.5906724506529127,
+              "2": 0.06343892480812488
+            },
+            "confidence": 0.38600867597936905
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 15,
+      "warmup": false,
+      "wall_ms": 418.09156909585,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.7554298470155975
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.839328288787586,
+              "motion": 0.0073222451988719925,
+              "normal": 0.15334946601354205
+            },
+            "confidence": 0.7589924331813789
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.3535509508649968,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.060873637821671274,
+              "1": 0.5247017734916606,
+              "2": 0.4144245886866681
+            },
+            "confidence": 0.2870526602374909
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 16,
+      "warmup": false,
+      "wall_ms": 412.2071312740445,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.24394027093010556
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.39890728485818794,
+              "motion": 0.059605911025278235,
+              "normal": 0.5414868041165339
+            },
+            "confidence": 0.3122302061748009
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.9335069910712902,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.15691228552906597,
+              "1": 0.7526684378705777,
+              "2": 0.09041927660035624
+            },
+            "confidence": 0.6290026568058666
+          }
+        },
+        "usage": {
+          "input_tokens": 218,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 17,
+      "warmup": false,
+      "wall_ms": 420.6357914954424,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.735173265361566
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.7417548167871031,
+              "motion": 0.06980090001651114,
+              "normal": 0.18844428319638587
+            },
+            "confidence": 0.6126322251806546
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1616113549866645,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.07508995048988422,
+              "1": 0.6882087440335671,
+              "2": 0.23670130547654866
+            },
+            "confidence": 0.5323131160503507
+          }
+        },
+        "usage": {
+          "input_tokens": 218,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 18,
+      "warmup": false,
+      "wall_ms": 425.6882080808282,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.8524541734963532
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.47067031607769355,
+              "motion": 0.45308233000490766,
+              "normal": 0.07624735391739874
+            },
+            "confidence": 0.20600547411654033
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.322035182614357,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.0850910881101545,
+              "1": 0.507782641165334,
+              "2": 0.4071262707245115
+            },
+            "confidence": 0.26167396174800095
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 19,
+      "warmup": false,
+      "wall_ms": 411.63431480526924,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.18353788127388657
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.39751617439277803,
+              "motion": 0.006930735548709886,
+              "normal": 0.5955530900585121
+            },
+            "confidence": 0.39332963508776814
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.6947164892104364,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.38335025810763634,
+              "1": 0.5385829945742909,
+              "2": 0.07806674731807271
+            },
+            "confidence": 0.30787449186143634
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 20,
+      "warmup": false,
+      "wall_ms": 425.53876247256994,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.777403187645092
+          },
+          "category": {
+            "type": "choice",
+            "choice": "motion",
+            "probabilities": {
+              "thermal": 0.2783191113320838,
+              "motion": 0.61189023648786,
+              "normal": 0.10979065218005614
+            },
+            "confidence": 0.41783535473179
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1816889086691282,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.09587828615437205,
+              "1": 0.6265545190221274,
+              "2": 0.27756719482350045
+            },
+            "confidence": 0.4398317785331912
+          }
+        },
+        "usage": {
+          "input_tokens": 239,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 21,
+      "warmup": false,
+      "wall_ms": 411.78363002836704,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.11768418291628821
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.45398190983204817,
+              "motion": 0.006395079915854197,
+              "normal": 0.5396230102520976
+            },
+            "confidence": 0.30943451537814637
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.8562655188626228,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.1750560787879207,
+              "1": 0.7936223235615358,
+              "2": 0.031321597650543466
+            },
+            "confidence": 0.6904334853423038
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 22,
+      "warmup": false,
+      "wall_ms": 417.20930207520723,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.6689993772165308
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.6967457763180526,
+              "motion": 0.006888950809890287,
+              "normal": 0.29636527287205705
+            },
+            "confidence": 0.5451186644770788
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.3185626237985668,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.08589999653060985,
+              "1": 0.5096373831402133,
+              "2": 0.40446262032917674
+            },
+            "confidence": 0.26445607471032007
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 23,
+      "warmup": false,
+      "wall_ms": 409.14445649832487,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.22229297352396976
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.4912652560049788,
+              "motion": 0.00599018298018516,
+              "normal": 0.5027445610148361
+            },
+            "confidence": 0.25411684152225417
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.0923566683632555,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.09147024823436901,
+              "1": 0.7247028351680066,
+              "2": 0.1838269165976244
+            },
+            "confidence": 0.58705425275201
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 24,
+      "warmup": false,
+      "wall_ms": 409.1540575027466,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.1304815704689824
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.3647567268893054,
+              "motion": 0.006210711720581618,
+              "normal": 0.6290325613901131
+            },
+            "confidence": 0.44354884208516965
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.8034377515255747,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.24313225106250988,
+              "1": 0.7102977463494057,
+              "2": 0.04657000258808452
+            },
+            "confidence": 0.5654466195241084
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 25,
+      "warmup": false,
+      "wall_ms": 409.92133878171444,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.08321607843741269
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.2559942476928133,
+              "motion": 0.006706821964320255,
+              "normal": 0.7372989303428663
+            },
+            "confidence": 0.6059483955142995
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.3772093302011557,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.6577622761526241,
+              "1": 0.3072661174935961,
+              "2": 0.03497160635377979
+            },
+            "confidence": 0.4341860046982664
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 26,
+      "warmup": false,
+      "wall_ms": 409.35457311570644,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.09896121095020269
+          },
+          "category": {
+            "type": "choice",
+            "choice": "normal",
+            "probabilities": {
+              "thermal": 0.32876431248308763,
+              "motion": 0.006345449189490687,
+              "normal": 0.6648902383274217
+            },
+            "confidence": 0.4973353574911325
+          },
+          "severity": {
+            "type": "score",
+            "score": 0.8849790279570084,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.18634558295929596,
+              "1": 0.7423298061243999,
+              "2": 0.07132461091630424
+            },
+            "confidence": 0.6134947091865997
+          }
+        },
+        "usage": {
+          "input_tokens": 215,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 27,
+      "warmup": false,
+      "wall_ms": 411.6618614643812,
+      "response": {
+        "model": "/home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf",
+        "answers": {
+          "alert": {
+            "type": "noul",
+            "noul": 0.6652270845817271
+          },
+          "category": {
+            "type": "choice",
+            "choice": "thermal",
+            "probabilities": {
+              "thermal": 0.7194954569889249,
+              "motion": 0.060955698707954135,
+              "normal": 0.2195488443031209
+            },
+            "confidence": 0.5792431854833874
+          },
+          "severity": {
+            "type": "score",
+            "score": 1.1468829398526876,
+            "legend": {
+              "0": "Low",
+              "1": "Moderate",
+              "2": "Critical"
+            },
+            "probabilities": {
+              "0": 0.07487958807512074,
+              "1": 0.703357883997071,
+              "2": 0.22176252792780832
+            },
+            "confidence": 0.5550368259956064
+          }
+        },
+        "usage": {
+          "input_tokens": 218,
+          "output_tokens": 0
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "summary": {
+    "p50_ms": 412.2071312740445,
+    "p95_ms": 425.9853707626462,
+    "requests_per_second": 2.399131529428738,
+    "wall_seconds": 10.42043743468821
+  }
+}

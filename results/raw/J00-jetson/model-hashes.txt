@@ -1,0 +1,14 @@
+a247afd6414918eac8e520a9e6137dc271235461ecbe1180462221d5b8d40b03  models/LFM2.5-2.6B-QAD-Q4_0.gguf
+85a98fafdaf1328b6876fd1360d7ed69e74c6cefc14dd07fb6306e1940386c87  models/LFM2.5-2.6B-DSpark-Q8_0.gguf
+16aff27ea2eefdc32b9897f43854a5d3170c1dc8dccb9c756905af30a4e22402  models/d1-3B-Q4_K_M.gguf
+2505920ce464b7c54acd8b7b74a931c0c671f06d0c8833760b2fbceeb253e92a  models/mmproj-d1-3B-Q8_0.gguf
+cd94463f4cac9c700ec6750df8df005bb6846de410e159d1f5e985e1171693d3  models/d1-omni-600M-Q8_0.gguf
+df887978550cdbb45f0f57d7b436a0f844689f9f561395a144ced500606c3a89  models/mmproj-d1-omni-600M-Q8_0.gguf
+d5dca201170e98fad783ddf65c1dd94244accccbffce4a2746255cbd21b6a21c  models/d1-omni-600M-F16.gguf
+2f0942d5a5f64cf69c3356d2be439b71644b1f0eb3a580912a5a0179eeaba77d  /home/heath/lfm-jetson-J00.jxHb0T/models/d1-3B-Q8_0.gguf
+02a8b7e17487d326e46d68ce0ba24211e1b80a14c4cd0597fa73c1cd697f52ed  /home/heath/lfm-jetson-J00.jxHb0T/models/LFM2.5-2.6B-Q4_K_M.gguf
+b4315123505e547f10daf2445733e89a84bb42e682a589450d0880a03cac9556  /home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-Q4_0.gguf
+093be6e3437800b868bc24df13f1d6f6da877ad28dfa5a5da5db01e9e8df7128  /home/heath/lfm-jetson-J00.jxHb0T/models/mmproj-d1-3B-F16.gguf
+77e4a6b626847876a98fd242756921024b54e608e166b562f3f3596ff29eda53  /home/heath/lfm-jetson-J00.jxHb0T/models/mmproj-d1-omni-600M-F16.gguf
+e198962c08903f3ba29f0ce6bf8e17f5e60bf85ec2f8673e1e2aab03508937e5  /home/heath/lfm-jetson-J00.jxHb0T/models/LFM2.5-2.6B-DSpark-F16.gguf
+63786b768e43562591a934625a66539eab39beb09e6e3d38e17509e34b79a3cd  /home/heath/lfm-jetson-J00.jxHb0T/models/LFM2.5-2.6B-DSpark-Q4_K_M.gguf

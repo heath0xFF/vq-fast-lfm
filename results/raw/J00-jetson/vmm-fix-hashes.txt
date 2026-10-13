@@ -1,0 +1,2 @@
+a3ea0dfc4ee6f6ecf464c70565a5a30e784eb213406641839c649faed0aeb05d  /home/heath/lfm-jetson-J00.jxHb0T/build/bin/libggml-cuda.so
+e66270014b694ab1380d3bfd5654e42ae7ab3a0f3642d2093627be4739dbcf31  /home/heath/lfm-jetson-J00.jxHb0T/jetson-vmm-pool.patch

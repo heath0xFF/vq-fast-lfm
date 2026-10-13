@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label plain-final --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/plain-final.json -n 128 -r 3 --warm 1
+plain-final code warm: 22.37 tok/s, 5940 ms, draft=0, accepted=0
+plain-final math warm: 22.34 tok/s, 5915 ms, draft=0, accepted=0
+plain-final chat warm: 22.37 tok/s, 5900 ms, draft=0, accepted=0
+plain-final code measured: 22.33 tok/s, 5916 ms, draft=0, accepted=0
+plain-final math measured: 22.34 tok/s, 5915 ms, draft=0, accepted=0
+plain-final chat measured: 22.37 tok/s, 5902 ms, draft=0, accepted=0
+plain-final code measured: 22.33 tok/s, 5917 ms, draft=0, accepted=0
+plain-final math measured: 22.40 tok/s, 5900 ms, draft=0, accepted=0
+plain-final chat measured: 22.30 tok/s, 5918 ms, draft=0, accepted=0
+plain-final code measured: 22.34 tok/s, 5913 ms, draft=0, accepted=0
+plain-final math measured: 22.31 tok/s, 5922 ms, draft=0, accepted=0
+plain-final chat measured: 22.38 tok/s, 5899 ms, draft=0, accepted=0
+plain-final code: median 22.33 tok/s, 5916 ms/request
+plain-final math: median 22.34 tok/s, 5915 ms/request
+plain-final chat: median 22.37 tok/s, 5902 ms/request

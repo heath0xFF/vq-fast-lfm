@@ -1,0 +1,43 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label jetson-omni-first --output /home/heath/lfm-jetson-J00.jxHb0T/results/omni-first-text.json -n 30 --warm 5
+jetson-omni-first text {"p50_ms": 85.57686861604452, "p95_ms": 92.8966524079442, "requests_per_second": 11.406260788116517, "wall_seconds": 2.6301344987004995}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label jetson-omni-first --output /home/heath/lfm-jetson-J00.jxHb0T/results/omni-first-image.json -n 5 --warm 2
+jetson-omni-first image {"p50_ms": 75.10465383529663, "p95_ms": 75.313750654459, "requests_per_second": 13.244864325965517, "wall_seconds": 0.3775048106908798}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label jetson-omni-first --output /home/heath/lfm-jetson-J00.jxHb0T/results/omni-first-audio.json -n 3 --warm 1
+Traceback (most recent call last):
+  File "/home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py", line 116, in <module>
+    main()
+  File "/home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py", line 97, in main
+    data['runs'].append(one(index))
+                        ^^^^^^^^^^
+  File "/home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py", line 87, in one
+    response, elapsed = post(args.url, body)
+                        ^^^^^^^^^^^^^^^^^^^^
+  File "/home/heath/lfm-jetson-J00.jxHb0T/tools/d1bench.py", line 33, in post
+    with urllib.request.urlopen(req, timeout=300) as r:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 515, in open
+    response = self._open(req, data)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 532, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1373, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/urllib/request.py", line 1348, in do_open
+    r = h.getresponse()
+        ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1457, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 305, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response

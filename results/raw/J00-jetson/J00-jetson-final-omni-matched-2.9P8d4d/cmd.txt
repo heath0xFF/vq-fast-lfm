@@ -1,0 +1,4 @@
+SERVER: /home/heath/lfm-jetson-J00.jxHb0T/build/bin/llama-server -m /home/heath/lfm-jetson-J00.jxHb0T/models/d1-omni-600M-Q8_0.gguf --mmproj /home/heath/lfm-jetson-J00.jxHb0T/models/mmproj-d1-omni-600M-Q8_0.gguf --device CUDA0 -ngl 99 -fa on -t 4 -c 8192 -np 4 -b 4096 -ub 4096 --host 127.0.0.1 --port 8098 
+CLIENT: python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-matched-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-text-2.json -n 100 --warm 5
+CLIENT: python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label omni-matched-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-image-2.json -n 10 --warm 2
+CLIENT: python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label omni-matched-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-matched-audio-2.json -n 5 --warm 1

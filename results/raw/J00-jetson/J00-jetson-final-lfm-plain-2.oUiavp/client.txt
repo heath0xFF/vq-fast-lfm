@@ -1,0 +1,16 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label plain-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-lfm-plain-2.json -n 128 -r 3 --warm 1
+plain-2 code warm: 19.33 tok/s, 6820 ms, draft=0, accepted=0
+plain-2 math warm: 19.36 tok/s, 6750 ms, draft=0, accepted=0
+plain-2 chat warm: 19.44 tok/s, 6708 ms, draft=0, accepted=0
+plain-2 code measured: 19.33 tok/s, 6763 ms, draft=0, accepted=0
+plain-2 math measured: 19.39 tok/s, 6740 ms, draft=0, accepted=0
+plain-2 chat measured: 19.44 tok/s, 6710 ms, draft=0, accepted=0
+plain-2 code measured: 19.33 tok/s, 6762 ms, draft=0, accepted=0
+plain-2 math measured: 19.30 tok/s, 6770 ms, draft=0, accepted=0
+plain-2 chat measured: 19.45 tok/s, 6706 ms, draft=0, accepted=0
+plain-2 code measured: 19.39 tok/s, 6741 ms, draft=0, accepted=0
+plain-2 math measured: 19.27 tok/s, 6782 ms, draft=0, accepted=0
+plain-2 chat measured: 19.40 tok/s, 6721 ms, draft=0, accepted=0
+plain-2 code: median 19.33 tok/s, 6762 ms/request
+plain-2 math: median 19.30 tok/s, 6770 ms/request
+plain-2 chat: median 19.44 tok/s, 6710 ms/request

@@ -27,7 +27,7 @@ Deploy only when the board is reachable and available for testing:
 - Copy the **contents** of `third_party/llama.cpp-master/pkg-build-snapdragon/` to `~/lfm-fast/lcpp-master/`. The server must be at `~/lfm-fast/lcpp-master/bin/llama-server`.
 - Copy both `scripts/env.sh` and `scripts/lenv-master.sh` to `~/lfm-fast/`. Keep a copy of any existing board-specific environment file before replacing it.
 - `lenv-master.sh` sets `L`, `LFM`, model paths, and the host/DSP library paths. It puts the master build's libraries before GenieX libraries. `env.sh` creates the unversioned RPC library links.
-- The DSpark default is `~/models/LFM2.5-2.6B-DSpark-Q8_0.gguf`. Set `D_Q8` or the serving script's `DRAFT` if the file is elsewhere.
+- The DSpark default is `~/models/dspark/LFM2.5-2.6B-DSpark-Q8_0.gguf` (confirmed on the board in E15). Set `D_Q8` or the serving script's `DRAFT` if the file is elsewhere.
 
 The checked-in environment file has local tests, but has not yet been tested on the board. See [setup-notes.md](setup-notes.md) for library requirements.
 

@@ -1,0 +1,2 @@
+Available devices:
+  CUDA0: Orin (7485 MiB, 6192 MiB free)

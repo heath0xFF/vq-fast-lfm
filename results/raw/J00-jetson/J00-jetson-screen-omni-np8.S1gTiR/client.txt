@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-np8 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-np8.json -n 25 --warm 3
+omni-np8 text {"p50_ms": 85.00320464372635, "p95_ms": 97.09032438695431, "requests_per_second": 11.394159702763567, "wall_seconds": 2.194106511771679}

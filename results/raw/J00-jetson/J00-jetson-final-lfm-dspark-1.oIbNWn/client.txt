@@ -1,0 +1,23 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label dspark-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-lfm-dspark-1.json -n 128 -r 3 --warm 1
+dspark-1 code warm: 44.23 tok/s, 3248 ms, draft=218, accepted=101
+dspark-1 math warm: 44.45 tok/s, 3069 ms, draft=239, accepted=100
+dspark-1 chat warm: 30.73 tok/s, 4324 ms, draft=340, accepted=88
+dspark-1 code measured: 46.37 tok/s, 2950 ms, draft=218, accepted=101
+dspark-1 math measured: 44.45 tok/s, 3065 ms, draft=239, accepted=100
+dspark-1 chat measured: 30.79 tok/s, 4315 ms, draft=340, accepted=88
+dspark-1 code measured: 46.37 tok/s, 2947 ms, draft=218, accepted=101
+dspark-1 math measured: 44.46 tok/s, 3065 ms, draft=239, accepted=100
+dspark-1 chat measured: 30.79 tok/s, 4318 ms, draft=340, accepted=88
+dspark-1 code measured: 46.39 tok/s, 2944 ms, draft=218, accepted=101
+dspark-1 math measured: 44.53 tok/s, 3059 ms, draft=239, accepted=100
+dspark-1 chat measured: 30.78 tok/s, 4317 ms, draft=340, accepted=88
+dspark-1 code: median 46.37 tok/s, 2947 ms/request
+dspark-1 math: median 44.46 tok/s, 3065 ms/request
+dspark-1 chat: median 30.79 tok/s, 4317 ms/request
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label dspark-full --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-lfm-dspark-full.json -n 3072 -r 1 --warm 0
+dspark-full code measured: 41.01 tok/s, 44001 ms, draft=3744, accepted=1378
+dspark-full math measured: 49.29 tok/s, 62561 ms, draft=5263, accepted=2485
+dspark-full chat measured: 27.11 tok/s, 45091 ms, draft=3879, accepted=784
+dspark-full code: median 41.01 tok/s, 44001 ms/request
+dspark-full math: median 49.29 tok/s, 62561 ms/request
+dspark-full chat: median 27.11 tok/s, 45091 ms/request

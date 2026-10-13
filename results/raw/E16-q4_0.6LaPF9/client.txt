@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label q4_0 --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/q4_0.json -n 128 -r 3 --warm 1
+q4_0 code warm: 26.11 tok/s, 5193 ms, draft=254, accepted=97
+q4_0 math warm: 30.86 tok/s, 4371 ms, draft=221, accepted=102
+q4_0 chat warm: 17.56 tok/s, 7479 ms, draft=385, accepted=83
+q4_0 code measured: 26.33 tok/s, 5075 ms, draft=254, accepted=97
+q4_0 math measured: 30.80 tok/s, 4378 ms, draft=221, accepted=102
+q4_0 chat measured: 17.55 tok/s, 7480 ms, draft=385, accepted=83
+q4_0 code measured: 26.26 tok/s, 5085 ms, draft=254, accepted=97
+q4_0 math measured: 30.73 tok/s, 4389 ms, draft=221, accepted=102
+q4_0 chat measured: 17.51 tok/s, 7501 ms, draft=385, accepted=83
+q4_0 code measured: 26.17 tok/s, 5104 ms, draft=254, accepted=97
+q4_0 math measured: 30.61 tok/s, 4406 ms, draft=221, accepted=102
+q4_0 chat measured: 17.47 tok/s, 7518 ms, draft=385, accepted=83
+q4_0 code: median 26.26 tok/s, 5085 ms/request
+q4_0 math: median 30.73 tok/s, 4389 ms/request
+q4_0 chat: median 17.51 tok/s, 7501 ms/request

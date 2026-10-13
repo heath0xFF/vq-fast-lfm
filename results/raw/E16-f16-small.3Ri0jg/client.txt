@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label f16-small --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/f16-small.json -n 128 -r 3 --warm 1
+f16-small code warm: 23.47 tok/s, 5705 ms, draft=227, accepted=100
+f16-small math warm: 23.79 tok/s, 5595 ms, draft=230, accepted=101
+f16-small chat warm: 15.84 tok/s, 8263 ms, draft=340, accepted=88
+f16-small code measured: 23.49 tok/s, 5659 ms, draft=227, accepted=100
+f16-small math measured: 23.67 tok/s, 5620 ms, draft=230, accepted=101
+f16-small chat measured: 15.79 tok/s, 8288 ms, draft=340, accepted=88
+f16-small code measured: 23.46 tok/s, 5666 ms, draft=227, accepted=100
+f16-small math measured: 23.64 tok/s, 5627 ms, draft=230, accepted=101
+f16-small chat measured: 15.80 tok/s, 8282 ms, draft=340, accepted=88
+f16-small code measured: 23.36 tok/s, 5688 ms, draft=227, accepted=100
+f16-small math measured: 23.64 tok/s, 5629 ms, draft=230, accepted=101
+f16-small chat measured: 15.79 tok/s, 8291 ms, draft=340, accepted=88
+f16-small code: median 23.46 tok/s, 5666 ms/request
+f16-small math: median 23.64 tok/s, 5627 ms/request
+f16-small chat: median 15.79 tok/s, 8288 ms/request

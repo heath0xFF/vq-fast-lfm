@@ -1,0 +1,13 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label graph-opt --output /home/heath/lfm-jetson-J00.jxHb0T/results/lfm-graph-opt.json -n 128 -r 2 --warm 1
+graph-opt code warm: 19.22 tok/s, 6869 ms, draft=0, accepted=0
+graph-opt math warm: 19.29 tok/s, 6774 ms, draft=0, accepted=0
+graph-opt chat warm: 19.33 tok/s, 6747 ms, draft=0, accepted=0
+graph-opt code measured: 19.37 tok/s, 6750 ms, draft=0, accepted=0
+graph-opt math measured: 19.28 tok/s, 6778 ms, draft=0, accepted=0
+graph-opt chat measured: 19.30 tok/s, 6756 ms, draft=0, accepted=0
+graph-opt code measured: 19.32 tok/s, 6766 ms, draft=0, accepted=0
+graph-opt math measured: 19.22 tok/s, 6798 ms, draft=0, accepted=0
+graph-opt chat measured: 19.23 tok/s, 6781 ms, draft=0, accepted=0
+graph-opt code: median 19.34 tok/s, 6758 ms/request
+graph-opt math: median 19.25 tok/s, 6788 ms/request
+graph-opt chat: median 19.27 tok/s, 6768 ms/request

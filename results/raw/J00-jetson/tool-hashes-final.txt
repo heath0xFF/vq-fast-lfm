@@ -1,0 +1,14 @@
+889b4ed7e5ca17c1d7561ac3c3c9f77410cdfcc075875915476cb3040b38cb0b  /home/heath/lfm-jetson-J00.jxHb0T/build/bin/llama-server
+cdda0487e41bc4c01a831d954f07b1df71f17bc73401007a3d9b441fcba0f7a0  /home/heath/lfm-jetson-J00.jxHb0T/build/bin/llama-bench
+a3ea0dfc4ee6f6ecf464c70565a5a30e784eb213406641839c649faed0aeb05d  /home/heath/lfm-jetson-J00.jxHb0T/build/bin/libggml-cuda.so
+bca972a7dfbee590cc0dd8ebe33d8c8d33fbe560ef6a18b74ac03eca1657d2b3  /home/heath/lfm-jetson-J00.jxHb0T/build/bin/libllama.so
+de8b65ececb10bf76b0c521760b800fb269520c711da68cdc5e8dd7db9cad224  /home/heath/lfm-jetson-J00.jxHb0T/tools/d1bench.py
+aed9b7453ad2114c3525dd8752ac7f96798f876cd79458c3cebb381033423eee  /home/heath/lfm-jetson-J00.jxHb0T/tools/d1_fidelity.py
+252defaddb6bed16f399bfe46af50a354e0a92c1928442a2d0a408f3a449a86f  /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py
+03eb2128caad1cdd140d32e5e643b0a6b5c891d027bbe17dc4b16364e6884deb  /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py
+c17698919676e2ed0e31a9a9daf815fb2dd661f7d855e51a84989df2c8f2cbd6  /home/heath/lfm-jetson-J00.jxHb0T/tools/d1_run.sh
+a7e7363e1ad25863b43a658ce0c058430b86e392eec1e95221c59008e5f8c23c  /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt
+345c8edc8bf2fce6d4b21d6b0fe3c2d66c064c55c0483e75bc1bff8a1046680e  /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt
+ef3c857144960b682fc02725134270618f1d1102612ef554d3905394446a687b  /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt
+59dfb9a4acb36fe2a2affc14bacbee2920ff435cb13cc314a08c13f66ba7860e  /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav
+0a9342b1a25d2bb6334f6ef8fed5a4da5dec3c7847aaea530aef1e248e497d80  /home/heath/lfm-jetson-J00.jxHb0T/env.sh

@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label dspark-q8-n3 --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/dspark-q8-n3.json -n 128 -r 3 --warm 1
+dspark-q8-n3 code warm: 21.04 tok/s, 6358 ms, draft=132, accepted=82
+dspark-q8-n3 math warm: 22.93 tok/s, 5793 ms, draft=122, accepted=86
+dspark-q8-n3 chat warm: 20.15 tok/s, 6542 ms, draft=138, accepted=80
+dspark-q8-n3 code measured: 21.12 tok/s, 6258 ms, draft=132, accepted=82
+dspark-q8-n3 math measured: 22.89 tok/s, 5794 ms, draft=122, accepted=86
+dspark-q8-n3 chat measured: 20.20 tok/s, 6526 ms, draft=138, accepted=80
+dspark-q8-n3 code measured: 21.08 tok/s, 6266 ms, draft=132, accepted=82
+dspark-q8-n3 math measured: 22.87 tok/s, 5799 ms, draft=122, accepted=86
+dspark-q8-n3 chat measured: 20.18 tok/s, 6532 ms, draft=138, accepted=80
+dspark-q8-n3 code measured: 21.07 tok/s, 6272 ms, draft=132, accepted=82
+dspark-q8-n3 math measured: 22.80 tok/s, 5818 ms, draft=122, accepted=86
+dspark-q8-n3 chat measured: 20.14 tok/s, 6543 ms, draft=138, accepted=80
+dspark-q8-n3 code: median 21.08 tok/s, 6266 ms/request
+dspark-q8-n3 math: median 22.87 tok/s, 5799 ms/request
+dspark-q8-n3 chat: median 20.18 tok/s, 6532 ms/request

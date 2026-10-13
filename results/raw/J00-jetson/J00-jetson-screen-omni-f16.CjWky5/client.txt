@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-f16 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-f16.json -n 25 --warm 3
+omni-f16 text {"p50_ms": 73.62973131239414, "p95_ms": 85.24768799543381, "requests_per_second": 13.11879095785838, "wall_seconds": 1.9056634167209268}

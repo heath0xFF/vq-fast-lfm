@@ -1,0 +1,6 @@
+  $ python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py text --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-text-2.json -n 100 --warm 5
+vq-omni-2 text {"p50_ms": 110.35586858633906, "p95_ms": 120.49760180525482, "requests_per_second": 8.940983146523457, "wall_seconds": 11.184452353976667}
+  $ python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py image --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-image-2.json -n 10 --warm 2
+vq-omni-2 image {"p50_ms": 117.81435401644558, "p95_ms": 122.75766697712243, "requests_per_second": 8.409699063703833, "wall_seconds": 1.1891031919512898}
+  $ python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py audio --audio /home/arduino/lfm-fast/jfk.wav --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-audio-2.json -n 5 --warm 1
+vq-omni-2 audio {"p50_ms": 1484.3404570128769, "p95_ms": 1491.1751390900463, "requests_per_second": 0.6685084119747415, "wall_seconds": 7.479337448021397}

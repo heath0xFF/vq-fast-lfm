@@ -1,0 +1,244 @@
+{
+  "label": "vq-3b-1",
+  "mode": "image",
+  "concurrency": 1,
+  "requests": [
+    {
+      "state": null,
+      "images": [
+        "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAIAAADTED8xAAAEM0lEQVR4nO3TQQ3EQBADwSAJf1DHJQdiHpblKhnASjv9fDDsST8AkgTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwrT6A3/tadukTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4EYAJoFn8+y19AicCMAE0i3+/pU/gRAAmgGbx77f0CZwIwATQLP79lj6BEwGYAJrFv9/SJ3AiABNAs/j3W/oETgRgAmgW/35Ln8CJAEwAzeLfb+kTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4EYAJoFn8+y19AicCMAE0i3+/pU/gRAAmgGbx77f0CZwIwATQLP79lj6BEwGYAJrFv9/SJ3AiABNAs/j3W/oETgRgAmgW/35Ln8CJAEwAzeLfb+kTOBGACaBZ/PstfQInAjABNIt/v6VP4EQAJoBm8e+39AmcCMAE0Cz+/ZY+gRMBmACaxb/f0idwIgATQLP491v6BE4EYAJoFv9+S5/AiQBMAM3i32/pEzgRgAmgWfz7LX0CJwIwATSLf7+lT+BEACaAZvHvt/QJnAjABNAs/v2WPoETAZgAmsW/39IncCIAE0Cz+Pdb+gROBGACaBb/fkufwIkATADN4t9v6RM4qQ8ALgTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEwTQBMEwDTBMA0ATBNAEwTANMEwDQBME0ATBMA0wTANAEw7Q+Jtf6rw5hx4QAAAABJRU5ErkJggg=="
+      ],
+      "questions": {
+        "red": {
+          "type": "noul",
+          "instructions": "Is there a red object in this picture?"
+        }
+      }
+    }
+  ],
+  "runs": [
+    {
+      "request_index": 0,
+      "warmup": true,
+      "wall_ms": 1240.205867914483,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": true,
+      "wall_ms": 1199.7293510939926,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1204.3934429530054,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1202.4459298700094,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1203.0646819621325,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1202.9503060039133,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1200.902896001935,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1198.9824650809169,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1197.7729769423604,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1199.7681979555637,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1198.1323009822518,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    },
+    {
+      "request_index": 0,
+      "warmup": false,
+      "wall_ms": 1198.2792280614376,
+      "response": {
+        "model": "/home/arduino/models/d1/d1-3B-Q4_K_M.gguf",
+        "answers": {
+          "red": {
+            "type": "noul",
+            "noul": 0.9855660462577762
+          }
+        },
+        "usage": {
+          "input_tokens": 91,
+          "output_tokens": 0
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "summary": {
+    "p50_ms": 1200.3355469787493,
+    "p95_ms": 1204.3934429530054,
+    "requests_per_second": 0.8324125187484175,
+    "wall_seconds": 12.013274397933856
+  }
+}

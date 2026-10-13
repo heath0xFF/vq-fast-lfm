@@ -1,0 +1,4 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-best-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-best-text-3.json -n 100 --warm 5
+3b-best-3 text {"p50_ms": 413.4610593318939, "p95_ms": 428.7893231958151, "requests_per_second": 2.399559011495095, "wall_seconds": 41.674324124120176}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label 3b-best-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-best-image-3.json -n 10 --warm 2
+3b-best-3 image {"p50_ms": 374.38620207831264, "p95_ms": 375.7029753178358, "requests_per_second": 2.6676963787257346, "wall_seconds": 3.748552526347339}

@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-q8 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-3b-q8.json -n 25 --warm 3
+3b-q8 text {"p50_ms": 412.2071312740445, "p95_ms": 425.9853707626462, "requests_per_second": 2.399131529428738, "wall_seconds": 10.42043743468821}

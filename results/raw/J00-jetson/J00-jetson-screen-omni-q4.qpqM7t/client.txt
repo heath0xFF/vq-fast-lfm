@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-q4 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-q4.json -n 25 --warm 3
+omni-q4 text {"p50_ms": 85.84130182862282, "p95_ms": 98.13412465155125, "requests_per_second": 11.301531942060972, "wall_seconds": 2.212089487351477}

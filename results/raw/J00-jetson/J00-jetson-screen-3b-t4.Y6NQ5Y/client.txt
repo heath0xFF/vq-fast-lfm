@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-t4 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-3b-t4.json -n 25 --warm 3
+3b-t4 text {"p50_ms": 418.7009409070015, "p95_ms": 434.4228180125356, "requests_per_second": 2.3622794993046985, "wall_seconds": 10.58299833163619}

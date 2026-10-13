@@ -1,6 +1,6 @@
 # Next performance tests
 
-Status: offline preparation only. No new board results or inference-engine patches.
+Status: d1 scheduler work remains untested. [E15](experiments/E15-dspark-server-recheck.md) screened speculation; [E16](experiments/E16-dspark-cost-and-prefix.md) measured its cycle cost, reproduced target-only token flips, and tested draft formats/CPU sampling. No VQ inference-engine patches have been made. [J00](experiments/J00-orin-nano-comparison.md) adds the Jetson comparison and a local CUDA virtual-memory workaround.
 
 ## Before using the board
 
@@ -44,7 +44,7 @@ For throughput, test actual cross-request batches of 1, 2, and 4 independent dec
 
 ## 4. Chat: small-batch verification
 
-Repeat the 1, 2, 3, 4, 5, 8, and 16-token cost curve before kernel work. A faster kernel must also improve complete requests. Test the deployed QAD model and serving sampler separately from the historical Q4_0 greedy benchmark.
+E16 reproduced the chat/math flips with target-only batched-prefix evaluation and refreshed the QAD cost curve for 1, 2, 3, 4, 5, and 10 positions. Localize the changed target logits/state, including the unresolved code case; forcing HVX did not restore parity. Test `--no-spec-draft-backend-sampling` on complete tasks before adopting its short-prefix gain. A faster kernel must improve complete requests without a quality regression. Keep the deployed QAD model and serving sampler separate from the historical Q4_0 greedy benchmark.
 
 Use useful output length, not repetition loops, to score speculation. Defer CPU/GPU redistribution and general clock sweeps until evidence points to them.
 

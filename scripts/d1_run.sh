@@ -3,7 +3,7 @@
 # usage: d1_run.sh "<label>" "<taskset cpus|none>" "<server extra args>" "<client cmd1>" ["<client cmd2>" ...]
 set -eo pipefail
 [ "$#" -ge 4 ] || { echo "usage: d1_run.sh label cpus server-args client-command [...]" >&2; exit 1; }
-source "$HOME/lfm-fast/lenv-master.sh"
+source "${LFM_ENV:-$HOME/lfm-fast/lenv-master.sh}"
 label=$1; cpus=$2; sargs=$3; shift 3
 [[ "$label" =~ ^[a-zA-Z0-9][a-zA-Z0-9._-]*$ ]] || { echo "Invalid experiment label" >&2; exit 1; }
 MODEL=${MODEL:-$HOME/models/d1/d1-3B-Q4_K_M.gguf}

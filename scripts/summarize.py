@@ -8,6 +8,8 @@ for f in sorted(glob.glob(os.path.join(root, '**', '*.json'), recursive=True)):
         d = json.load(open(f))
     except Exception:
         continue
+    if not isinstance(d, dict):
+        continue
     runs = d.get('runs') or []
     if not runs or 'decode_tps' not in runs[0]:
         continue

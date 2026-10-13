@@ -1,0 +1,16 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label dspark-n9 --output /home/heath/lfm-jetson-J00.jxHb0T/results/dspark-n9.json -n 128 -r 3 --warm 1
+dspark-n9 code warm: 43.63 tok/s, 3345 ms, draft=218, accepted=101
+dspark-n9 math warm: 44.09 tok/s, 3094 ms, draft=239, accepted=100
+dspark-n9 chat warm: 30.55 tok/s, 4349 ms, draft=340, accepted=88
+dspark-n9 code measured: 46.00 tok/s, 2973 ms, draft=218, accepted=101
+dspark-n9 math measured: 44.40 tok/s, 3069 ms, draft=239, accepted=100
+dspark-n9 chat measured: 30.75 tok/s, 4320 ms, draft=340, accepted=88
+dspark-n9 code measured: 46.36 tok/s, 2947 ms, draft=218, accepted=101
+dspark-n9 math measured: 44.48 tok/s, 3063 ms, draft=239, accepted=100
+dspark-n9 chat measured: 30.77 tok/s, 4319 ms, draft=340, accepted=88
+dspark-n9 code measured: 46.34 tok/s, 2948 ms, draft=218, accepted=101
+dspark-n9 math measured: 44.41 tok/s, 3067 ms, draft=239, accepted=100
+dspark-n9 chat measured: 30.79 tok/s, 4315 ms, draft=340, accepted=88
+dspark-n9 code: median 46.34 tok/s, 2948 ms/request
+dspark-n9 math: median 44.41 tok/s, 3067 ms/request
+dspark-n9 chat: median 30.77 tok/s, 4319 ms/request

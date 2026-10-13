@@ -1,0 +1,12 @@
+a247afd6414918eac8e520a9e6137dc271235461ecbe1180462221d5b8d40b03  /home/arduino/.cache/geniex/models/LiquidAI/LFM2.5-2.6B-GGUF/LFM2.5-2.6B-QAD-Q4_0.gguf
+85a98fafdaf1328b6876fd1360d7ed69e74c6cefc14dd07fb6306e1940386c87  /home/arduino/models/dspark/LFM2.5-2.6B-DSpark-Q8_0.gguf
+63786b768e43562591a934625a66539eab39beb09e6e3d38e17509e34b79a3cd  /home/arduino/models/dspark/LFM2.5-2.6B-DSpark-Q4_K_M.gguf
+815b22bb99c8f63ee59791a9c0678bb90e9bd5574322ef959e22c98578aa5365  /home/arduino/lfm-fast/lcpp-master/bin/llama-server
+d0de66dab817c4e9e086b9e10c94c36a6bdacc1b75d9c8d4918907c33f9d8588  /home/arduino/lfm-fast/lcpp-master/lib/libllama.so
+6d848d31d283729782568dafe052f66e9be03ae6f18250975893afbdf468dac3  /home/arduino/lfm-fast/lcpp-master/lib/libggml-hexagon.so
+50c40350791eef6a53d0aace08a0736ca1ee4cd293ec68d00628119c194c185f  /home/arduino/lfm-fast/lcpp-master/lib/libggml-htp-v75.so
+03eb2128caad1cdd140d32e5e643b0a6b5c891d027bbe17dc4b16364e6884deb  /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py
+58ccb652b47739a2f0edbee0f462e5ca539dceacfb873d4ed4c30dcb2de11c3b  /home/arduino/lfm-fast/E15-tools.bMnY63/d1_run.sh
+a7e7363e1ad25863b43a658ce0c058430b86e392eec1e95221c59008e5f8c23c  /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt
+345c8edc8bf2fce6d4b21d6b0fe3c2d66c064c55c0483e75bc1bff8a1046680e  /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt
+ef3c857144960b682fc02725134270618f1d1102612ef554d3905394446a687b  /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt

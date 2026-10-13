@@ -1,0 +1,23 @@
+  $ python3 /home/arduino/lfm-fast/J00-tools/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label vq-lfm-1 --output /home/arduino/lfm-fast/results/J00-vq-matched/lfm-short-1.json -n 128 -r 3 --warm 1
+vq-lfm-1 code warm: 22.23 tok/s, 5977 ms, draft=0, accepted=0
+vq-lfm-1 math warm: 22.21 tok/s, 5949 ms, draft=0, accepted=0
+vq-lfm-1 chat warm: 22.26 tok/s, 5928 ms, draft=0, accepted=0
+vq-lfm-1 code measured: 22.27 tok/s, 5931 ms, draft=0, accepted=0
+vq-lfm-1 math measured: 22.31 tok/s, 5925 ms, draft=0, accepted=0
+vq-lfm-1 chat measured: 22.23 tok/s, 5938 ms, draft=0, accepted=0
+vq-lfm-1 code measured: 22.29 tok/s, 5927 ms, draft=0, accepted=0
+vq-lfm-1 math measured: 22.20 tok/s, 5952 ms, draft=0, accepted=0
+vq-lfm-1 chat measured: 22.22 tok/s, 5939 ms, draft=0, accepted=0
+vq-lfm-1 code measured: 22.26 tok/s, 5935 ms, draft=0, accepted=0
+vq-lfm-1 math measured: 22.24 tok/s, 5941 ms, draft=0, accepted=0
+vq-lfm-1 chat measured: 22.23 tok/s, 5937 ms, draft=0, accepted=0
+vq-lfm-1 code: median 22.27 tok/s, 5931 ms/request
+vq-lfm-1 math: median 22.24 tok/s, 5941 ms/request
+vq-lfm-1 chat: median 22.23 tok/s, 5938 ms/request
+  $ python3 /home/arduino/lfm-fast/J00-tools/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label vq-lfm-full --output /home/arduino/lfm-fast/results/J00-vq-matched/lfm-full.json -n 3072 -r 1 --warm 0
+vq-lfm-full code measured: 21.41 tok/s, 83391 ms, draft=0, accepted=0
+vq-lfm-full math measured: 21.04 tok/s, 125854 ms, draft=0, accepted=0
+vq-lfm-full chat measured: 21.88 tok/s, 32569 ms, draft=0, accepted=0
+vq-lfm-full code: median 21.41 tok/s, 83391 ms/request
+vq-lfm-full math: median 21.04 tok/s, 125854 ms/request
+vq-lfm-full chat: median 21.88 tok/s, 32569 ms/request

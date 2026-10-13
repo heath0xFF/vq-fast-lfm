@@ -1,0 +1,5 @@
+  $ python3 /home/arduino/lfm-fast/E15-tools.bMnY63/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt --label long-plain --output /home/arduino/lfm-fast/results/E15-QAD-screen.t7Y94X/long-plain.json -n 512 -r 1 --warm 0
+long-plain code measured: 22.20 tok/s, 23281 ms, draft=0, accepted=0
+long-plain math measured: 22.20 tok/s, 23253 ms, draft=0, accepted=0
+long-plain code: median 22.20 tok/s, 23281 ms/request
+long-plain math: median 22.20 tok/s, 23253 ms/request

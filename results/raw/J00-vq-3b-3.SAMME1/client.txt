@@ -1,0 +1,4 @@
+  $ python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py text --label vq-3b-3 --output /home/arduino/lfm-fast/results/J00-vq-matched/3b-text-3.json -n 100 --warm 5
+vq-3b-3 text {"p50_ms": 596.9290210632607, "p95_ms": 602.7025149669498, "requests_per_second": 1.6747418447498719, "wall_seconds": 59.71069530118257}
+  $ python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py image --label vq-3b-3 --output /home/arduino/lfm-fast/results/J00-vq-matched/3b-image-3.json -n 10 --warm 2
+vq-3b-3 image {"p50_ms": 1200.2738140290603, "p95_ms": 1200.9331630542874, "requests_per_second": 0.8330601012138381, "wall_seconds": 12.003935832995921}

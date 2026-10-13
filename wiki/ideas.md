@@ -7,7 +7,7 @@ Next work: [offline preparation and board test plan](next-tests.md). No new spee
 | # | Idea | Expected gain | Status |
 |---|---|---|---|
 | 1 | Baseline all compute units | – | ✅ E00 |
-| 2 | **DSpark speculative decoding** (Liquid's official drafter, block 9) | +16–22% on code/math in E10; loses on free-form chat | 🔄 measured; cheaper small-batch verification is still needed |
+| 2 | **DSpark speculative decoding** (Liquid's official drafter, block 9) | task- and output-length-dependent (E10/E15/E16) | 🔄 E16: target-only batch evaluation reproduces two token flips; complete-task quality remains open |
 | 3 | n-gram / prompt-lookup speculation (`ngram-mod`, `ngram-map-k`) | +5–17% on tested edit tasks; larger gains on repeats are not general | ✅ E14 (`ngram-mod`); other variants not established |
 | 4 | HTP env knobs: `NHVX`, `NHMX`, `OPBATCH`, `OPQUEUE`, `OPFUSION`, `OPPOLL`, `MM_SELECT`, `FA_SELECT`, `HOSTBUF`, `DMA64`, power mode | few % | ⏳ |
 | 5 | CPU-side overhead trim: pin driver thread to prime core | +5–10 % | ✅ E05 (cpu2 → 21.7 t/s) |
@@ -22,9 +22,9 @@ Next work: [offline preparation and board test plan](next-tests.md). No new spee
 | 14 | Concurrent streams (n_seq_max>1) aggregate throughput | high aggregate | ⏳ |
 | 15 | Custom HTP kernel work (we have the Hexagon SDK via toolchain image) | last resort | ❓ |
 | 16 | **Lower-bit weights**: Q3_K_*, Q2_K, IQ4_NL, Q4_K_M | – | ❌ E08/E09: no format beats Q4_0 speed on HTP; sub-4-bit KLD doubles |
-| 17 | **Cheaper small-batch verify on HTP**: wider-register HVX Q4_0 GEMM for M=2..8 and/or `vlut16`-based faster Q4_0→fp16 HMX dequant (E11) | unlock 1.4–2× typical, ~4× copy-heavy via DSpark | ⏳ proposed next (big effort; SDK+toolchain ready) |
+| 17 | **Cheaper small-batch verify on HTP**: wider-register HVX Q4_0 GEMM for M=2..8 and/or `vlut16`-based faster Q4_0→fp16 HMX dequant (E11) | complete-task gain unknown; E16 verification ~109 ms/cycle | ⏳ requires numerical and quality controls, not only throughput tests |
 | 18 | Task-adaptive speculation (plain fallback when acceptance low; n-gram for copy-heavy) | removes the −22 % chat loss | ⏳ |
-| 19 | Cheaper DSpark draft: Q4_0 draft weights, faster TOP_K/CONCAT on 128k logits | −10..20 ms/cycle | ⏳ |
+| 19 | Cheaper DSpark draft: Q4_0 draft weights, faster TOP_K/CONCAT on 128k logits | ~7–9% short code/math gain from CPU sampling | 🔄 E16: existing CPU-sampling flag helps; Q4_0 loses acceptance, F16 is slower; complete-task test pending |
 | 20 | Understand the 21.0/22.5 t/s bimodality (E13) | +7 % in slow mode | ❓ no root |
 
 ## d1 decision models (added later)

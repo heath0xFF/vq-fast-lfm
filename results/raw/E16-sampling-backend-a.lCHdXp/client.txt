@@ -1,0 +1,11 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt --label sampling-backend-a --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/sampling-backend-a.json -n 128 -r 3 --warm 1
+sampling-backend-a code warm: 30.51 tok/s, 4494 ms, draft=209, accepted=102
+sampling-backend-a math warm: 29.99 tok/s, 4491 ms, draft=221, accepted=102
+sampling-backend-a code measured: 30.80 tok/s, 4377 ms, draft=209, accepted=102
+sampling-backend-a math measured: 29.96 tok/s, 4493 ms, draft=221, accepted=102
+sampling-backend-a code measured: 30.74 tok/s, 4382 ms, draft=209, accepted=102
+sampling-backend-a math measured: 29.89 tok/s, 4501 ms, draft=221, accepted=102
+sampling-backend-a code measured: 30.71 tok/s, 4386 ms, draft=209, accepted=102
+sampling-backend-a math measured: 29.89 tok/s, 4504 ms, draft=221, accepted=102
+sampling-backend-a code: median 30.74 tok/s, 4382 ms/request
+sampling-backend-a math: median 29.89 tok/s, 4501 ms/request

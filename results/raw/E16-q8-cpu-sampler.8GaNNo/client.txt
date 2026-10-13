@@ -1,0 +1,16 @@
+  $ python3 /home/arduino/lfm-fast/E16-tools.aziaAy/specbench.py /home/arduino/lfm-fast/E15-tools.bMnY63/code.txt /home/arduino/lfm-fast/E15-tools.bMnY63/math.txt /home/arduino/lfm-fast/E15-tools.bMnY63/chat.txt --label q8-cpu-sampler --output /home/arduino/lfm-fast/results/E16-investigate.NfHrhY/q8-cpu-sampler.json -n 128 -r 3 --warm 1
+q8-cpu-sampler code warm: 32.56 tok/s, 4229 ms, draft=209, accepted=102
+q8-cpu-sampler math warm: 31.91 tok/s, 4237 ms, draft=221, accepted=102
+q8-cpu-sampler chat warm: 20.47 tok/s, 6450 ms, draft=340, accepted=88
+q8-cpu-sampler code measured: 32.72 tok/s, 4134 ms, draft=209, accepted=102
+q8-cpu-sampler math measured: 31.87 tok/s, 4240 ms, draft=221, accepted=102
+q8-cpu-sampler chat measured: 20.44 tok/s, 6458 ms, draft=340, accepted=88
+q8-cpu-sampler code measured: 32.69 tok/s, 4136 ms, draft=209, accepted=102
+q8-cpu-sampler math measured: 31.86 tok/s, 4240 ms, draft=221, accepted=102
+q8-cpu-sampler chat measured: 20.43 tok/s, 6463 ms, draft=340, accepted=88
+q8-cpu-sampler code measured: 32.65 tok/s, 4140 ms, draft=209, accepted=102
+q8-cpu-sampler math measured: 31.73 tok/s, 4257 ms, draft=221, accepted=102
+q8-cpu-sampler chat measured: 20.42 tok/s, 6466 ms, draft=340, accepted=88
+q8-cpu-sampler code: median 32.69 tok/s, 4136 ms/request
+q8-cpu-sampler math: median 31.86 tok/s, 4240 ms/request
+q8-cpu-sampler chat: median 20.43 tok/s, 6463 ms/request

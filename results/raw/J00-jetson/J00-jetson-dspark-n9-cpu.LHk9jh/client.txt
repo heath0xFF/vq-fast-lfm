@@ -1,0 +1,16 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/specbench.py /home/heath/lfm-jetson-J00.jxHb0T/tools/code.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/math.txt /home/heath/lfm-jetson-J00.jxHb0T/tools/chat.txt --label dspark-n9-cpu --output /home/heath/lfm-jetson-J00.jxHb0T/results/dspark-n9-cpu.json -n 128 -r 3 --warm 1
+dspark-n9-cpu code warm: 42.54 tok/s, 3393 ms, draft=218, accepted=101
+dspark-n9-cpu math warm: 42.29 tok/s, 3219 ms, draft=239, accepted=100
+dspark-n9-cpu chat warm: 29.14 tok/s, 4551 ms, draft=340, accepted=88
+dspark-n9-cpu code measured: 44.11 tok/s, 3094 ms, draft=218, accepted=101
+dspark-n9-cpu math measured: 42.33 tok/s, 3212 ms, draft=239, accepted=100
+dspark-n9-cpu chat measured: 29.21 tok/s, 4544 ms, draft=340, accepted=88
+dspark-n9-cpu code measured: 44.19 tok/s, 3084 ms, draft=218, accepted=101
+dspark-n9-cpu math measured: 41.94 tok/s, 3242 ms, draft=239, accepted=100
+dspark-n9-cpu chat measured: 29.22 tok/s, 4543 ms, draft=340, accepted=88
+dspark-n9-cpu code measured: 44.17 tok/s, 3085 ms, draft=218, accepted=101
+dspark-n9-cpu math measured: 42.38 tok/s, 3207 ms, draft=239, accepted=100
+dspark-n9-cpu chat measured: 29.29 tok/s, 4531 ms, draft=340, accepted=88
+dspark-n9-cpu code: median 44.17 tok/s, 3085 ms/request
+dspark-n9-cpu math: median 42.33 tok/s, 3212 ms/request
+dspark-n9-cpu chat: median 29.22 tok/s, 4543 ms/request

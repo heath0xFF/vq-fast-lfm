@@ -3,7 +3,7 @@
 > **Correction (added later):** the `summarize` prompt does *not* produce a summary – the greedy model copies the input paragraph back verbatim (and then loops). The +104 % row is therefore a best-case "verbatim echo" number, not representative of summarization. Real gains seen so far: code/math/edit-style +6..22 %, JSON ~0, free-form chat negative.
 
 Target = geniex `LFM2.5-2.6B-Q4_0.gguf`, draft = `DSpark-Q8_0` (349 MB), both on HTP0, `-fa on`, greedy, 200 new tokens, `-t 1`, master build (8bb3cf0).
-Plain = `llama-completion` same prompt. `scripts/spbench.sh`. Output is lossless (target verifies everything).
+Plain = `llama-completion` same prompt. `scripts/spbench.sh`. The target verifies draft tokens, but this experiment did not establish token-by-token parity. The later [E15 QAD/server check](E15-dspark-server-recheck.md) found repeatable differences from plain greedy output on the HTP; do not treat these historical timings as proof of lossless execution.
 
 | prompt | plain t/s | n-max 3 | n-max 4 | n-max 6 | n-max 9 | best vs plain |
 |---|---:|---:|---:|---:|---:|---:|
@@ -28,7 +28,7 @@ BF16 target: chat 2.6, code 3.5, math 4.8, summarize 7.7, json 4.5 · Q4_0 targe
 Pinning the host thread to a prime core removed the earlier mysterious ~70 ms/cycle (228 → 155 ms).
 `--spec-draft-p-min` (confidence truncation) does not help: chat 16.6/18.3/15.7, code 23.7/20.7/22.3 for p-min 0.3/0.5/0.7.
 
-Other failures seen: draft on CPU (`-devd none`) crashes (shares target embedding in HTP buffer); F16 draft hits `fastrpc_mmap failed` (HTP mapping budget).
+Other failures seen: draft on CPU (`-devd none`) crashes (shares target embedding in HTP buffer); F16 draft hits `fastrpc_mmap failed` (HTP mapping budget). **Later correction:** [E16](E16-dspark-cost-and-prefix.md) loaded F16 at context 2048 / batch 128, but it was slower than Q8. Moving only draft sampling to CPU also worked and improved short-prefix speed.
 
 ## What would make it pay everywhere
 Verify cost is the problem (103 ms for M≥5 vs 45 ms for M=1). With cheaper verification (target ≈ 55–60 ms) and the same acceptance,

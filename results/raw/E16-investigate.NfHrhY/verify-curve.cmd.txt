@@ -1,0 +1,1 @@
+taskset -c 2 /home/arduino/lfm-fast/lcpp-master/bin/llama-bench -m /home/arduino/.cache/geniex/models/LiquidAI/LFM2.5-2.6B-GGUF/LFM2.5-2.6B-QAD-Q4_0.gguf --device HTP0 -ngl 99 -fa 1 -t 1 -p 1\,2\,3\,4\,5\,10 -n 0 -r 3 -o json 

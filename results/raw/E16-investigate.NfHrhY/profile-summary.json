@@ -1,0 +1,431 @@
+{
+  "q8": {
+    "source": "results/raw/E16-trace-q8.zPgGvQ/log.txt",
+    "groups": [
+      {
+        "ops_per_batch": 505,
+        "tokens": 2,
+        "batches": 1,
+        "mean_batch_ms": 59.187,
+        "mean_operation_ms": {
+          "MUL_MAT": 25.7,
+          "MUL_MAT_NX": 24.946,
+          "FLASH_ATTN_EXT": 1.403,
+          "SWIGLU": 1.183,
+          "RMS_NORM+MUL": 0.957,
+          "ADD": 0.872,
+          "SSM_CONV": 0.618,
+          "CPY": 0.505,
+          "MUL": 0.489,
+          "GET_ROWS": 0.345,
+          "CONCAT": 0.337,
+          "MUL_MAT+ADD": 0.334,
+          "SCALE": 0.313,
+          "ROPE": 0.236,
+          "SET_ROWS": 0.157
+        }
+      },
+      {
+        "ops_per_batch": 104,
+        "tokens": 2,
+        "batches": 1,
+        "mean_batch_ms": 16.479,
+        "mean_operation_ms": {
+          "MUL_MAT": 7.374,
+          "MUL_MAT_NX": 3.845,
+          "MUL_MAT+ADD": 1.719,
+          "TOP_K": 1.355,
+          "FLASH_ATTN_EXT": 0.845,
+          "RMS_NORM+MUL": 0.158,
+          "SWIGLU": 0.104,
+          "CONT": 0.096,
+          "PAD": 0.095,
+          "CONCAT": 0.088,
+          "ROPE": 0.078,
+          "REPEAT": 0.07,
+          "ADD": 0.06,
+          "SET_ROWS": 0.056,
+          "ARGMAX": 0.045,
+          "GET_ROWS": 0.034,
+          "SIGMOID": 0.015
+        }
+      },
+      {
+        "ops_per_batch": 643,
+        "tokens": 62,
+        "batches": 1,
+        "mean_batch_ms": 126.332,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 47.525,
+          "MUL_MAT+ADD": 24.958,
+          "MUL_MAT": 16.364,
+          "SWIGLU": 10.636,
+          "CPY": 5.893,
+          "FLASH_ATTN_EXT": 5.773,
+          "RMS_NORM+MUL": 3.939,
+          "MUL": 3.522,
+          "SSM_CONV": 2.264,
+          "CONCAT": 1.654,
+          "ADD": 1.559,
+          "ROPE": 0.764,
+          "GET_ROWS": 0.269,
+          "SET_ROWS": 0.266,
+          "SCALE": 0.246
+        }
+      },
+      {
+        "ops_per_batch": 25,
+        "tokens": 62,
+        "batches": 1,
+        "mean_batch_ms": 1.971,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 0.748,
+          "MUL_MAT": 0.696,
+          "RMS_NORM+MUL": 0.215,
+          "SET_ROWS": 0.138,
+          "ROPE": 0.125
+        }
+      },
+      {
+        "ops_per_batch": 527,
+        "tokens": 4,
+        "batches": 1,
+        "mean_batch_ms": 101.723,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 47.806,
+          "MUL_MAT": 44.137,
+          "FLASH_ATTN_EXT": 1.718,
+          "SWIGLU": 1.425,
+          "RMS_NORM+MUL": 1.322,
+          "CPY": 0.963,
+          "ADD": 0.915,
+          "MUL": 0.784,
+          "SSM_CONV": 0.739,
+          "CONCAT": 0.412,
+          "MUL_MAT+ADD": 0.345,
+          "GET_ROWS": 0.332,
+          "ROPE": 0.32,
+          "SET_ROWS": 0.162
+        }
+      },
+      {
+        "ops_per_batch": 25,
+        "tokens": 4,
+        "batches": 1,
+        "mean_batch_ms": 1.313,
+        "mean_operation_ms": {
+          "MUL_MAT": 0.697,
+          "MUL_MAT_NX": 0.409,
+          "RMS_NORM+MUL": 0.059,
+          "SET_ROWS": 0.055,
+          "ROPE": 0.051
+        }
+      },
+      {
+        "ops_per_batch": 173,
+        "tokens": 9,
+        "batches": 13,
+        "mean_batch_ms": 46.435923076923075,
+        "mean_operation_ms": {
+          "TOP_K": 12.118307692307692,
+          "MUL_MAT+ADD": 11.087076923076923,
+          "MUL_MAT": 11.010846153846154,
+          "MUL_MAT_NX": 6.4583076923076925,
+          "FLASH_ATTN_EXT": 2.008769230769231,
+          "CONCAT": 1.5747692307692307,
+          "ARGMAX": 0.3520769230769231,
+          "CONT": 0.28923076923076924,
+          "SWIGLU": 0.28861538461538466,
+          "RMS_NORM+MUL": 0.2706923076923077,
+          "PAD": 0.22276923076923077,
+          "REPEAT": 0.20869230769230768,
+          "GET_ROWS": 0.1676153846153846,
+          "ROPE": 0.1206923076923077,
+          "SIGMOID": 0.061384615384615385,
+          "SET_ROWS": 0.05753846153846154
+        }
+      },
+      {
+        "ops_per_batch": 601,
+        "tokens": 10,
+        "batches": 12,
+        "mean_batch_ms": 109.49583333333332,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 46.703583333333334,
+          "MUL_MAT+ADD": 28.28758333333333,
+          "MUL_MAT": 21.612583333333333,
+          "FLASH_ATTN_EXT": 3.5889166666666665,
+          "SWIGLU": 3.1179166666666664,
+          "CPY": 1.778,
+          "RMS_NORM+MUL": 1.17,
+          "MUL": 0.8555,
+          "SSM_CONV": 0.74725,
+          "CONCAT": 0.52875,
+          "ROPE": 0.3455833333333333,
+          "GET_ROWS": 0.18458333333333335,
+          "SET_ROWS": 0.14708333333333334,
+          "ADD": 0.01891666666666667
+        }
+      },
+      {
+        "ops_per_batch": 25,
+        "tokens": 10,
+        "batches": 12,
+        "mean_batch_ms": 1.6530833333333332,
+        "mean_operation_ms": {
+          "MUL_MAT": 0.8475833333333334,
+          "MUL_MAT_NX": 0.5756666666666667,
+          "RMS_NORM+MUL": 0.068,
+          "SET_ROWS": 0.06125,
+          "ROPE": 0.056
+        }
+      },
+      {
+        "ops_per_batch": 506,
+        "tokens": 3,
+        "batches": 1,
+        "mean_batch_ms": 88.465,
+        "mean_operation_ms": {
+          "MUL_MAT": 39.901,
+          "MUL_MAT_NX": 39.746,
+          "FLASH_ATTN_EXT": 1.557,
+          "SWIGLU": 1.335,
+          "RMS_NORM+MUL": 1.294,
+          "ADD": 0.907,
+          "MUL": 0.742,
+          "CPY": 0.728,
+          "SSM_CONV": 0.705,
+          "CONCAT": 0.389,
+          "GET_ROWS": 0.324,
+          "ROPE": 0.322,
+          "SET_ROWS": 0.161
+        }
+      },
+      {
+        "ops_per_batch": 25,
+        "tokens": 3,
+        "batches": 1,
+        "mean_batch_ms": 1.209,
+        "mean_operation_ms": {
+          "MUL_MAT": 0.644,
+          "MUL_MAT_NX": 0.36,
+          "RMS_NORM+MUL": 0.056,
+          "SET_ROWS": 0.053,
+          "ROPE": 0.051
+        }
+      }
+    ]
+  },
+  "f16": {
+    "source": "results/raw/E16-trace-f16.8RAYlN/log.txt",
+    "groups": [
+      {
+        "ops_per_batch": 505,
+        "tokens": 2,
+        "batches": 1,
+        "mean_batch_ms": 58.809,
+        "mean_operation_ms": {
+          "MUL_MAT": 25.632,
+          "MUL_MAT_NX": 24.744,
+          "FLASH_ATTN_EXT": 1.404,
+          "SWIGLU": 1.188,
+          "RMS_NORM+MUL": 0.914,
+          "ADD": 0.849,
+          "SSM_CONV": 0.618,
+          "CPY": 0.498,
+          "MUL": 0.485,
+          "GET_ROWS": 0.343,
+          "CONCAT": 0.325,
+          "MUL_MAT+ADD": 0.323,
+          "SCALE": 0.31,
+          "ROPE": 0.232,
+          "SET_ROWS": 0.155
+        }
+      },
+      {
+        "ops_per_batch": 119,
+        "tokens": 2,
+        "batches": 1,
+        "mean_batch_ms": 24.933,
+        "mean_operation_ms": {
+          "MUL_MAT": 16.042,
+          "MUL_MAT+ADD": 5.359,
+          "TOP_K": 1.349,
+          "FLASH_ATTN_EXT": 0.833,
+          "RMS_NORM+MUL": 0.17,
+          "SWIGLU": 0.103,
+          "CONT": 0.097,
+          "PAD": 0.091,
+          "CONCAT": 0.084,
+          "ROPE": 0.082,
+          "REPEAT": 0.074,
+          "ADD": 0.062,
+          "SET_ROWS": 0.058,
+          "ARGMAX": 0.044,
+          "GET_ROWS": 0.028,
+          "SIGMOID": 0.015
+        }
+      },
+      {
+        "ops_per_batch": 643,
+        "tokens": 62,
+        "batches": 1,
+        "mean_batch_ms": 125.389,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 47.119,
+          "MUL_MAT+ADD": 24.683,
+          "MUL_MAT": 16.286,
+          "SWIGLU": 10.59,
+          "CPY": 5.869,
+          "FLASH_ATTN_EXT": 5.794,
+          "RMS_NORM+MUL": 3.886,
+          "MUL": 3.474,
+          "SSM_CONV": 2.276,
+          "CONCAT": 1.64,
+          "ADD": 1.564,
+          "ROPE": 0.759,
+          "SET_ROWS": 0.27,
+          "GET_ROWS": 0.258,
+          "SCALE": 0.236
+        }
+      },
+      {
+        "ops_per_batch": 32,
+        "tokens": 62,
+        "batches": 1,
+        "mean_batch_ms": 4.096,
+        "mean_operation_ms": {
+          "MUL_MAT": 3.57,
+          "RMS_NORM+MUL": 0.213,
+          "SET_ROWS": 0.14,
+          "ROPE": 0.125
+        }
+      },
+      {
+        "ops_per_batch": 527,
+        "tokens": 4,
+        "batches": 1,
+        "mean_batch_ms": 101.234,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 47.596,
+          "MUL_MAT": 43.952,
+          "FLASH_ATTN_EXT": 1.712,
+          "SWIGLU": 1.418,
+          "RMS_NORM+MUL": 1.286,
+          "CPY": 0.961,
+          "ADD": 0.909,
+          "MUL": 0.776,
+          "SSM_CONV": 0.742,
+          "CONCAT": 0.414,
+          "GET_ROWS": 0.325,
+          "MUL_MAT+ADD": 0.322,
+          "ROPE": 0.32,
+          "SET_ROWS": 0.156
+        }
+      },
+      {
+        "ops_per_batch": 32,
+        "tokens": 4,
+        "batches": 1,
+        "mean_batch_ms": 2.69,
+        "mean_operation_ms": {
+          "MUL_MAT": 2.492,
+          "RMS_NORM+MUL": 0.052,
+          "ROPE": 0.048,
+          "SET_ROWS": 0.048
+        }
+      },
+      {
+        "ops_per_batch": 178,
+        "tokens": 9,
+        "batches": 14,
+        "mean_batch_ms": 82.02464285714285,
+        "mean_operation_ms": {
+          "MUL_MAT+ADD": 34.1895,
+          "MUL_MAT_NX": 16.30842857142857,
+          "MUL_MAT": 13.606285714285713,
+          "TOP_K": 12.129214285714287,
+          "FLASH_ATTN_EXT": 1.9968571428571429,
+          "CONCAT": 1.5755714285714286,
+          "ARGMAX": 0.363,
+          "CONT": 0.3077142857142857,
+          "SWIGLU": 0.28864285714285715,
+          "RMS_NORM+MUL": 0.28178571428571425,
+          "PAD": 0.22285714285714286,
+          "REPEAT": 0.20985714285714285,
+          "GET_ROWS": 0.15185714285714286,
+          "ROPE": 0.12892857142857142,
+          "SIGMOID": 0.059,
+          "SET_ROWS": 0.05871428571428571
+        }
+      },
+      {
+        "ops_per_batch": 601,
+        "tokens": 10,
+        "batches": 13,
+        "mean_batch_ms": 107.66838461538461,
+        "mean_operation_ms": {
+          "MUL_MAT_NX": 46.120384615384616,
+          "MUL_MAT+ADD": 27.781846153846153,
+          "MUL_MAT": 21.008307692307692,
+          "FLASH_ATTN_EXT": 3.578615384615385,
+          "SWIGLU": 3.0853076923076923,
+          "CPY": 1.7755384615384615,
+          "RMS_NORM+MUL": 1.1303846153846155,
+          "MUL": 0.841076923076923,
+          "SSM_CONV": 0.7411538461538462,
+          "CONCAT": 0.5124615384615384,
+          "ROPE": 0.34015384615384614,
+          "GET_ROWS": 0.18484615384615383,
+          "SET_ROWS": 0.14307692307692307,
+          "ADD": 0.019
+        }
+      },
+      {
+        "ops_per_batch": 32,
+        "tokens": 10,
+        "batches": 13,
+        "mean_batch_ms": 4.061230769230769,
+        "mean_operation_ms": {
+          "MUL_MAT": 3.8291538461538464,
+          "RMS_NORM+MUL": 0.0683076923076923,
+          "SET_ROWS": 0.05876923076923077,
+          "ROPE": 0.05738461538461539
+        }
+      },
+      {
+        "ops_per_batch": 506,
+        "tokens": 3,
+        "batches": 1,
+        "mean_batch_ms": 88.109,
+        "mean_operation_ms": {
+          "MUL_MAT": 39.761,
+          "MUL_MAT_NX": 39.629,
+          "FLASH_ATTN_EXT": 1.556,
+          "SWIGLU": 1.308,
+          "RMS_NORM+MUL": 1.267,
+          "ADD": 0.893,
+          "MUL": 0.729,
+          "CPY": 0.721,
+          "SSM_CONV": 0.708,
+          "CONCAT": 0.384,
+          "GET_ROWS": 0.339,
+          "ROPE": 0.309,
+          "SET_ROWS": 0.157
+        }
+      },
+      {
+        "ops_per_batch": 32,
+        "tokens": 3,
+        "batches": 1,
+        "mean_batch_ms": 2.243,
+        "mean_operation_ms": {
+          "MUL_MAT": 2.044,
+          "RMS_NORM+MUL": 0.051,
+          "SET_ROWS": 0.05,
+          "ROPE": 0.048
+        }
+      }
+    ]
+  }
+}

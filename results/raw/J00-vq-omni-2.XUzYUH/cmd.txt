@@ -1,0 +1,4 @@
+SERVER: taskset -c 2 /home/arduino/lfm-fast/lcpp-master/bin/llama-server -m /home/arduino/models/d1o/d1-omni-600M-Q8_0.gguf --mmproj /home/arduino/models/d1o/mmproj-d1-omni-600M-Q8_0.gguf --device HTP0 -ngl 99 -fa on -t 1 -c 8192 -np 4 -b 4096 -ub 4096 --host 127.0.0.1 --port 8098 
+CLIENT: python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py text --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-text-2.json -n 100 --warm 5
+CLIENT: python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py image --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-image-2.json -n 10 --warm 2
+CLIENT: python3 /home/arduino/lfm-fast/J00-tools/decisionbench.py audio --audio /home/arduino/lfm-fast/jfk.wav --label vq-omni-2 --output /home/arduino/lfm-fast/results/J00-vq-matched/omni-audio-2.json -n 5 --warm 1

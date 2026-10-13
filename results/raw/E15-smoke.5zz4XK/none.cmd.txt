@@ -1,0 +1,1 @@
+taskset -c 2 /home/arduino/lfm-fast/lcpp-master/bin/llama-speculative-simple -m /home/arduino/.cache/geniex/models/LiquidAI/LFM2.5-2.6B-GGUF/LFM2.5-2.6B-QAD-Q4_0.gguf --device HTP0 -ngl 99 -fa on -t 1 --spec-type none -f /home/arduino/lfm-fast/prompts/chat/math.txt -n 64 --temp 0 --top-k 1 

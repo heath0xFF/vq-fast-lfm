@@ -1,0 +1,8 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-matched-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-matched-text-1.json -n 100 --warm 5
+3b-matched-1 text {"p50_ms": 419.76066771894693, "p95_ms": 436.71038653701544, "requests_per_second": 2.361904294563892, "wall_seconds": 42.33871805481613}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label 3b-matched-1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-matched-image-1.json -n 10 --warm 2
+3b-matched-1 image {"p50_ms": 389.5358480513096, "p95_ms": 391.2428831681609, "requests_per_second": 2.561780470848906, "wall_seconds": 3.9035351052880287}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/d1_fidelity.py --url http://127.0.0.1:8098 --ref /home/heath/lfm-jetson-J00.jxHb0T/tools/ref_f16_seed1.json --save /home/heath/lfm-jetson-J00.jxHb0T/results/fidelity-3b-matched.json --label 3b-matched --acc
+3b-matched         labels: noul acc=61/67 brier=0.096 | choice acc=52/80 | 414 ms/decision
+saved 80 decisions (414 ms each)
+3b-matched         noul: mean|dP|=0.0399 max=0.197 flips@0.5=10/80 | choice: TV=0.0278 top1=77/80 | score: mean|dLevel|/range=0.0165 max=0.085 | 414 ms/decision

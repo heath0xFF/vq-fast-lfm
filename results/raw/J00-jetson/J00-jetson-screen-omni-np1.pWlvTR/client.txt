@@ -1,0 +1,2 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-np1 --output /home/heath/lfm-jetson-J00.jxHb0T/results/screen-omni-np1.json -n 25 --warm 3
+omni-np1 text {"p50_ms": 121.62422854453325, "p95_ms": 128.08071170002222, "requests_per_second": 8.12860518232492, "wall_seconds": 3.0755584063008428}

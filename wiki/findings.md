@@ -1,6 +1,6 @@
 # Key findings (curated)
 
-_Updated after E00–E14 and D00–D02. Device: Ventuno Q (QCS8275, Hexagon v75). Sections 1–7: LFM2.5-2.6B chat model; sections 8–9: d1 decision models._
+_Updated after E00–E16 and D00–D02. Device: Ventuno Q (QCS8275, Hexagon v75). Sections 1–7: LFM2.5-2.6B chat model; sections 8–9: d1 decision models._
 
 ## 1. Which engine? → the Hexagon NPU, by a mile  (E00)
 | | prefill t/s (pp512) | decode t/s |
@@ -9,7 +9,7 @@ _Updated after E00–E14 and D00–D02. Device: Ventuno Q (QCS8275, Hexagon v75)
 | GPU (Adreno OpenCL) | 39.6 | 5.3 |
 | hybrid | 108 | 9.8 |
 | **NPU (llama.cpp ggml-hexagon via GenieX)** | **678** | **19.7** |
-Whole graph (conv, attention, norms, LM head) runs on the HTP. CPU/GPU cannot help: they share the same DDR and the CPU tops out at ~28 GB/s vs the NPU's ~45 GB/s (E12).
+Whole graph (conv, attention, norms, LM head) runs on the HTP. Moving model layers to CPU/GPU did not help: they share DDR and the CPU tops out at ~28 GB/s vs the NPU's ~45 GB/s (E12). CPU draft sampling is a separate, measured improvement (E16).
 
 ## 2. Plain decode is at the memory roofline (E02, E11, E12)
 ~1.59 GB streamed per token at 42–45 GB/s ≈ 35 ms + ~6 ms of small ops ≈ 41–44 ms/token ⇒ **ceiling ≈ 23–24 t/s**. We measure 22.5 (good mode).
@@ -24,7 +24,13 @@ Kernel tuning of the plain decode path can't buy more than a few %. Faster than 
 ## 4. Quantization can't buy speed here (E08/E09)
 Only Q4_0 streams at the DDR roofline. Q3_K_M (−14 % bytes) is no faster; Q4_K_M −15 % slower; IQ4_NL −12 % slower (better fidelity, KLD 0.133 vs 0.225). Sub-4-bit also doubles KLD.
 
-## 5. Speculative decoding with Liquid's DSpark drafter (E04, E10) – works, lossless, but the HTP's small-batch cost caps the gain
+## 5. Speculative decoding with Liquid's DSpark drafter — task-dependent, output parity needs work
+
+**E15 live recheck (QAD target, server path):** Q8_0/n9 gave 31.38 tok/s on code and 30.44 on math for 128-token prefixes, versus 22.4 plain. At 512 tokens, code fell to 21.13 vs 22.20 plain; math reached 27.61 vs 22.20. Chat differed from plain at token 48; longer code/math differed at tokens 191/229. All outputs hit the token limit. These are not completed-task results or proof of lossless execution. Keep plain as the default; see [E15](experiments/E15-dspark-server-recheck.md) for raw evidence and limitations.
+
+**[E16 diagnosis](experiments/E16-dspark-cost-and-prefix.md):** the target alone reproduced the chat and math token flips when an identical prefix was evaluated as a batch, without speculation. The code mismatch remains unresolved; disabling HMX does not fix chat parity. Q8/n9 traces show ~109 ms verification + 46 ms drafting + 2 ms feature preparation, before host overhead. Moving draft sampling to CPU (`--no-spec-draft-backend-sampling`) gained ~7–9% on short code/math in two interleaved pairs, with unchanged tokens and acceptance. Q4_0 lost acceptance; F16 fits with smaller buffers but drafts at ~82 ms rather than 46 ms. No complete-task speed or quality claim.
+
+Historical E04/E10 findings:
 - GenieX's plugin can't run `draft-dspark`; our own llama.cpp build can.
 - Per-task decode, plain 20.8 → DSpark n-max 9: math 25.3 (+22 %), code 24.3 (+16 %), json 20.6 (±0), free-form chat 16.2 (**−22 %**, n-max 3: 19.1), and 42.3 (+104 %) on the "summarize" prompt – **but that prompt makes the model echo its input verbatim, so it is a best-case echo number, not typical summarization** (corrected).
 - Reason: a verify pass of M ≥ 5 tokens costs ~100 ms on the HTP (HMX path, dequant-bound) vs 45 ms for M = 1; M = 3–4 uses a slow HVX kernel (83–99 ms). The drafter adds ~38 ms/cycle (Q8_0 matmuls + Markov head over 128k logits).
@@ -35,13 +41,13 @@ Only Q4_0 streams at the DDR roofline. Q3_K_M (−14 % bytes) is no faster; Q4_K
 
 ## 6. Dead ends / blocked
 - **AI Hub / Genie / QAIRT**: `qai-hub-models` 0.64 has no LFM2 (short-conv hybrid) model and GenieX's QAIRT registry has no LFM entry; no AI Hub token available here. Even if ported, W4 decode is DDR-bound like Q4_0 → little to gain for decode.
-- GPU OpenCL path (5.3 t/s) and hybrid (9.8) are slower than CPU; CPU draft model for HTP target crashes; F16 draft exceeds HTP mapping budget.
+- GPU OpenCL path (5.3 t/s) and hybrid (9.8) are slower than CPU. Moving the whole draft model to CPU crashed in the historical HTP test. F16 had a mapping failure then, but fits at context 2048 / batch 128 in E16; it is slower than Q8.
 - **Second NPU**: Qualcomm docs say "dual Hexagon" for the IQ-8275 EVK, but the Ventuno Q exposes only `/dev/fastrpc-cdsp` (+ `gdsp0`, a general-purpose DSP, not an HTP); `HTP1` appears in ggml-hex only as a static fallback and `--device HTP1` is rejected. It also wouldn't help decode: DDR bandwidth is shared (NPU at ~88 % of the 51 GB/s theoretical peak).
 - `GGML_HEXAGON_*` power mode, OPPOLL, HOSTBUF: no measurable effect. A 21.0/22.5 t/s bimodality (E13) exists independent of all of them.
 
 ## 7. Where the remaining big upside is
-1. **Cheaper small-batch verification on the HTP** (HVX multi-column Q4_0 kernel for M=2–8 and/or faster Q4_0→fp16 HMX dequant) – unlocks DSpark/n-gram speculation: 1.4–2× typical, up to ~4× on copy-heavy tasks.
-2. Cheaper drafting (TOP_K/CONCAT over 128k logits, Q4_0 draft weights).
+1. **Cheaper small-batch verification on the HTP** (HVX multi-column Q4_0 kernel for M=2–8 and/or faster Q4_0→fp16 HMX dequant). Complete-task gains remain unmeasured; preserve target quality while changing kernels.
+2. Cheaper drafting: CPU sampling removes some TOP_K cost (E16). Q4_0 draft weights did not improve the code/chat screen.
 3. Task-adaptive speculation (fall back to plain when acceptance is low; n-gram for copy-heavy).
 
 ## 8. d1-3B (decision model) on the Ventuno Q  (D00, D01)

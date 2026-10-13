@@ -1,0 +1,4 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label 3b-matched-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-matched-text-3.json -n 100 --warm 5
+3b-matched-3 text {"p50_ms": 416.815129108727, "p95_ms": 433.39730985462666, "requests_per_second": 2.376695732991497, "wall_seconds": 42.07522175088525}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label 3b-matched-3 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-3b-matched-image-3.json -n 10 --warm 2
+3b-matched-3 image {"p50_ms": 390.0169627740979, "p95_ms": 392.5383947789669, "requests_per_second": 2.5591655388144607, "wall_seconds": 3.9075237018987536}

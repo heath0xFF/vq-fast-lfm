@@ -1,0 +1,6 @@
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py text --label omni-best-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-text-2.json -n 100 --warm 5
+omni-best-2 text {"p50_ms": 73.51147569715977, "p95_ms": 83.7743990123272, "requests_per_second": 13.240655066045276, "wall_seconds": 7.552496421150863}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py image --label omni-best-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-image-2.json -n 10 --warm 2
+omni-best-2 image {"p50_ms": 64.45873202756047, "p95_ms": 65.43905101716518, "requests_per_second": 15.429218373310906, "wall_seconds": 0.6481209713965654}
+  $ python3 /home/heath/lfm-jetson-J00.jxHb0T/tools/decisionbench.py audio --audio /home/heath/lfm-jetson-J00.jxHb0T/tools/jfk.wav --label omni-best-2 --output /home/heath/lfm-jetson-J00.jxHb0T/results/final-omni-best-audio-2.json -n 5 --warm 1
+omni-best-2 audio {"p50_ms": 615.3667522594333, "p95_ms": 618.4784723445773, "requests_per_second": 1.6125760662277724, "wall_seconds": 3.100628928281367}
